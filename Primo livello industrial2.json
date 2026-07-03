@@ -1,0 +1,836 @@
+{ "compressionlevel":-1,
+ "height":55,
+ "infinite":false,
+ "layers":[
+        {
+         "compression":"zlib",
+         "data":"eJzt2NGOgyAQBdBmk\/3\/X96HzSZdAwIyg1XPSXhoqmjnCkVeLwAAAAAAAAAAAAAAAADI8dXZMvolz2iNM46VebyZOu6dG5GRcd6nVpeoWm37ie53e\/8yLj\/v75+ja5TRb+25ke9+DbLqEz1\/1uacp8\/TPdlm1GdFvlnXuorWb878H1tdc\/nuf3f1fP+u+RQ9Y7e2Jo26\/hn5PiHjI3sI28+z+0tn1Vq+\/487ugYdmR9Wu3vGK2r\/ye8mn3hPkVr7hLN9b9+rjmQ9M\/c\/XWltnLH\/OLrn0JuhnPet2Hts9R2xTyzjupEx8F1orX5H13BHlPbLzedtI3mWrMq353wZ\/5rJc0ZEvhHH3NnqTN8ZX3FK8+5ZuRJPlnANtblYu0cDrusHYbkEWg==",
+         "encoding":"base64",
+         "height":55,
+         "id":1,
+         "name":"Livello tile 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":120,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":2,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.12.1",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "columns":0,
+         "firstgid":1,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"Industrial con oggetti",
+         "spacing":0,
+         "tilecount":124,
+         "tileheight":36,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_01.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_02.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_03.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_04.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_05.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_06.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_07.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_08.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_09.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_10.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_11.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_12.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_13.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_14.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_15.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_16.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_17.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_18.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_19.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_20.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_21.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":21,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_22.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_23.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_24.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_25.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_26.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_27.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_28.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_29.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_30.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_31.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":31,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_32.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_33.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":33,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_34.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":34,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_35.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":35,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_36.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":36,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_37.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":37,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_38.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":38,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_39.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":39,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_40.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":40,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_41.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":41,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_42.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":42,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_43.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":43,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_44.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":44,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_45.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":45,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_46.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":46,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_47.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":47,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_48.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":48,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_49.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":49,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_50.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":50,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_51.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":51,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_52.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":52,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_53.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":53,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_54.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":54,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_55.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":55,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_56.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":56,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_57.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":57,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_58.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":58,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_59.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":59,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_60.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":60,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_61.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":61,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_62.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":62,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_63.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":63,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_64.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":64,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_65.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":65,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_66.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":66,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_67.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":67,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_68.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":68,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_69.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":69,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_70.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":70,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_71.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":71,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_72.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":72,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_73.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":73,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_74.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":74,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_75.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":75,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_76.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":76,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_77.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":77,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_78.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":78,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_79.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":79,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_80.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":80,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/1 Tiles\/IndustrialTile_81.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"floor"
+                }, 
+                {
+                 "id":81,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/0.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":82,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/1.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":83,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/2.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":84,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/3.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":85,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/4.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":86,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/5.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":87,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/6.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":88,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/7.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":89,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/8.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":90,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/9.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":91,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Barrel1.png",
+                 "imageheight":26,
+                 "imagewidth":18
+                }, 
+                {
+                 "id":92,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Barrel2.png",
+                 "imageheight":26,
+                 "imagewidth":18
+                }, 
+                {
+                 "id":93,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Barrel3.png",
+                 "imageheight":26,
+                 "imagewidth":18
+                }, 
+                {
+                 "id":94,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Barrel4.png",
+                 "imageheight":26,
+                 "imagewidth":18
+                }, 
+                {
+                 "id":95,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Bench.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":96,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Board1.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":97,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Board2.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":98,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Board3.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":99,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box1.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":100,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box2.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":101,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box3.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":102,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box4.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":103,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box5.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":104,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box6.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":105,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box7.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":106,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Box8.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":107,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Bucket.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":108,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Fence1.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":109,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Fence2.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":110,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Fence3.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":111,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Fire-extinguisher1.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":112,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Fire-extinguisher2.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":113,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Fire-extinguisher3.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":115,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Ladder1.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"ladder"
+                }, 
+                {
+                 "id":116,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Ladder2.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"ladder"
+                }, 
+                {
+                 "id":117,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Ladder3.png",
+                 "imageheight":32,
+                 "imagewidth":32,
+                 "type":"ladder"
+                }, 
+                {
+                 "id":118,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Locker1.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":119,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Locker2.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":120,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Locker3.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                },
+            
+                {
+                 "id":121,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Locker4.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":122,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Mop.png",
+                 "imageheight":36,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":123,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Pointer1.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":124,
+                 "image":"..\/..\/..\/..\/GAMEON\/GAMEON premium\/INDUSTRIAL\/3 Objects\/Pointer2.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }],
+         "tilewidth":32
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":120
+}
