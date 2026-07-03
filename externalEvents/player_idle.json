@@ -287,7 +287,6 @@
       "comment": "Player shooting"
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -370,7 +369,7 @@
                 "",
                 "Bullet",
                 "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")",
+                "Player.PointY(\"GunSmoke\")-6",
                 ""
               ]
             },
@@ -464,7 +463,7 @@
                 "",
                 "Bullet",
                 "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")",
+                "Player.PointY(\"GunSmoke\")-6",
                 ""
               ]
             },
@@ -606,95 +605,6 @@
             "Player",
             "PlatformerObject",
             "yes"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Player Crouch "
-    },
-    {
-      "disabled": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"Down\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::And"
-          },
-          "parameters": [],
-          "subInstructions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player",
-                "Ladder",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PlatformBehavior::IsOnFloor"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject"
-              ]
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "PlatformBehavior::IsFalling"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject"
-              ]
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "PlatformBehavior::IsJumping"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject"
-              ]
-            }
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetNumberVariable"
-          },
-          "parameters": [
-            "State",
-            "=",
-            "10"
           ]
         }
       ]
