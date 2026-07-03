@@ -1,0 +1,197 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Player_Reload",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Actions below  RELOAD GUN\n"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Player",
+            "GunBulletCounter",
+            ">",
+            "6"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "11"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Player",
+            "Animation",
+            "=",
+            "\"Reload gun\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Stop player movement when reloading"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "11"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::IgnoreDefaultControls"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::MaxSpeed"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "11"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+          },
+          "parameters": [
+            "Player",
+            "Animation"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::IgnoreDefaultControls"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Player",
+            "GunBulletCounter",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Player",
+            "isShooting",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::MaxSpeed"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject",
+            "=",
+            "250"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ]
+}

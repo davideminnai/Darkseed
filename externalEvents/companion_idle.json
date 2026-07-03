@@ -1,0 +1,103 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Companion_Idle",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::MaxSpeed"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Idle\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlippedX"
+          },
+          "parameters": [
+            "Player",
+            "Flippable"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "yes"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "FlippableCapability::FlippableBehavior::FlippedX"
+          },
+          "parameters": [
+            "Player",
+            "Flippable"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "no"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ]
+}

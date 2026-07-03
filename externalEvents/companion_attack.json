@@ -1,0 +1,442 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Companion_Attack",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Attack\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Distance"
+          },
+          "parameters": [
+            "Nemici",
+            "Companion",
+            "400",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "TargetX",
+            "=",
+            "Nemici.CenterX()"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "TargetY",
+            "=",
+            "Nemici.CenterY()"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "TargetX",
+            ">=",
+            "Variable(CompanionX) + 30"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateRightKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "TargetX",
+            "<=",
+            "Variable(CompanionX) - 30"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateLeftKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Distance"
+          },
+          "parameters": [
+            "Nemici",
+            "Companion",
+            "30",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Sprite"
+          },
+          "parameters": [
+            "Companion",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "FlippableCapability::FlippableBehavior::FlippedX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "CompanionSlash",
+            "Companion.PointX(\"HitBox\")",
+            "Companion.PointY(\"HitBox\")",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "Companion",
+            "\"SlashTimer\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Distance"
+          },
+          "parameters": [
+            "Nemici",
+            "Companion",
+            "30",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Sprite"
+          },
+          "parameters": [
+            "Companion",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlippedX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "CompanionSlash",
+            "Companion.CenterX()-(Companion.PointX(\"HitBox\")-Companion.CenterX())",
+            "Companion.PointY(\"HitBox\")",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "Companion",
+            "\"SlashTimer\""
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+          },
+          "parameters": [
+            "Companion",
+            "Animation"
+          ]
+        },
+        {
+          "type": {
+            "value": "Distance"
+          },
+          "parameters": [
+            "Nemici",
+            "Companion",
+            "30",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "CompanionSlash",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "Companion",
+            "CompanionState",
+            "=",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+          },
+          "parameters": [
+            "Companion",
+            "Animation"
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Distance"
+          },
+          "parameters": [
+            "Nemici",
+            "Companion",
+            "30",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "CompanionSlash",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "Companion",
+            "CompanionState",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Collision"
+          },
+          "parameters": [
+            "CompanionSlash",
+            "RoboDrone"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BarraSaluteRoboDrone",
+            "-",
+            "Companion.Variable(SlashDamage)",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Collision"
+          },
+          "parameters": [
+            "CompanionSlash",
+            "RoboPatrol"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BarraSaluteRoboPatrol",
+            "-",
+            "Companion.Variable(SlashDamage)",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ]
+}

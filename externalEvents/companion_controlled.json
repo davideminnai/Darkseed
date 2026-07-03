@@ -1,0 +1,200 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Companion_Controlled",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Idle\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Walk\""
+          ]
+        },
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateLeftKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Right"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Walk\""
+          ]
+        },
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateRightKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Up"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateControl"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject",
+            "\"Jump\""
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "z"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        },
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CompanionAttack\"",
+            ">",
+            "5"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "Companion",
+            "CompanionState",
+            "=",
+            "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CompanionAttack\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ]
+}

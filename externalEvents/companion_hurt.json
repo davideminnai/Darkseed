@@ -1,0 +1,78 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Companion_Hurt",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Hurt\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::MaxSpeed"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+          },
+          "parameters": [
+            "Companion",
+            "Animation"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "Companion",
+            "CompanionState",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ]
+}

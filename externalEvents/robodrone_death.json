@@ -1,0 +1,100 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "RoboDrone_death",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "RoboDrone",
+      "conditions": [
+        {
+          "type": {
+            "value": "LinkedObjects::PickObjectsLinkedTo"
+          },
+          "parameters": [
+            "",
+            "BarraSaluteRoboDrone",
+            "RoboDrone",
+            ""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "RoboDrone",
+                "Animation",
+                "=",
+                "\"Death\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BarraSaluteRoboDrone",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "RoboDrone",
+                "Pathfinding",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "RoboDrone",
+                "TimedBackAndForthMirroredMovement",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "RoboDrone",
+                "0",
+                "300",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ClearForces"
+              },
+              "parameters": [
+                "RoboDrone"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "RoboDrone",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

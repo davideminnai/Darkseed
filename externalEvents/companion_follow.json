@@ -1,0 +1,117 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Companion_Follow",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Run\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "TargetX",
+            ">=",
+            "Variable(CompanionX) + 100"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateRightKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "TargetX",
+            "<=",
+            "Variable(CompanionX) - 100"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Companion",
+            "Flippable",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateLeftKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PathfindingBehavior::Acceleration"
+          },
+          "parameters": [
+            "Companion",
+            "Pathfinding",
+            "=",
+            "120"
+          ]
+        }
+      ],
+      "actions": []
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "RoboDrone_attack",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "RoboDrone",
+            "Animation",
+            "=",
+            "\"Attack\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "Player",
+            ">",
+            "RoboDrone.PointX(\"Center\")"
+          ]
+        },
+        {
+          "type": {
+            "value": "Sprite"
+          },
+          "parameters": [
+            "RoboDrone",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "RoboDrone",
+            "Flippable",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "BulletEnemyGun",
+            "RoboDrone.CenterX()+5",
+            "RoboDrone.CenterY() + 5",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AddForceTowardObject"
+          },
+          "parameters": [
+            "BulletEnemyGun",
+            "Player",
+            "200",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "6d326aaa7459782a48b425e2ff31e4c19473379e431c82cb3c8b3d50fb9540eb_Gun 4.aac",
+            "",
+            "2",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "GunParticlesEmitter",
+            "RoboDrone.CenterX()",
+            "RoboDrone.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "RoboDrone",
+            "\"AttackCooldown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "Player",
+            "<",
+            "RoboDrone.PointX(\"Center\")"
+          ]
+        },
+        {
+          "type": {
+            "value": "Sprite"
+          },
+          "parameters": [
+            "RoboDrone",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "RoboDrone",
+            "Flippable",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "BulletEnemyGun",
+            "RoboDrone.PointX(\"GunPoint\")- 65",
+            "RoboDrone.CenterY() + 5",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AddForceTowardObject"
+          },
+          "parameters": [
+            "BulletEnemyGun",
+            "Player",
+            "200",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "6d326aaa7459782a48b425e2ff31e4c19473379e431c82cb3c8b3d50fb9540eb_Gun 4.aac",
+            "",
+            "2",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "GunParticlesEmitter",
+            "RoboDrone.CenterX()",
+            "RoboDrone.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "RoboDrone",
+            "\"AttackCooldown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Sprite"
+          },
+          "parameters": [
+            "RoboDrone",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BarraSalute",
+            "-",
+            "3",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "Distance"
+          },
+          "parameters": [
+            "Player",
+            "RoboDrone",
+            "300",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoboDrone",
+            "State",
+            "=",
+            "3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "SlashBox",
+            "RoboDrone",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoboDrone",
+            "State",
+            "=",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ]
+}

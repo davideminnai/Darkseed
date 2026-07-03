@@ -1,0 +1,80 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Companion_Fall",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Companion",
+            "Animation",
+            "=",
+            "\"Fall\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "Player",
+            ">",
+            "Companion.CenterX()"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateRightKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "Player",
+            "<",
+            "Companion.CenterX()"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::SimulateLeftKey"
+          },
+          "parameters": [
+            "Companion",
+            "PlatformerObject"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ]
+}

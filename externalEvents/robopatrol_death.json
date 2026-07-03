@@ -1,0 +1,61 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "RoboPatrol_death",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "RoboPatrol",
+      "conditions": [
+        {
+          "type": {
+            "value": "LinkedObjects::PickObjectsLinkedTo"
+          },
+          "parameters": [
+            "",
+            "BarraSaluteRoboPatrol",
+            "RoboPatrol",
+            ""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "RoboPatrol",
+                "Animation",
+                "=",
+                "\"Death\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "RoboPatrol",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BarraSaluteRoboPatrol",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "associatedLayout": "Testin room",
+  "name": "Skel_Guard_Hurt",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Guard",
+            "Animation",
+            "=",
+            "\"Hurt\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+          },
+          "parameters": [
+            "Guard",
+            "Animation"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "BarraSaluteGuard",
+                "Guard",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
+              },
+              "parameters": [
+                "BarraSaluteGuard",
+                "<=",
+                "0",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Guard",
+                "State",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "BarraSaluteGuard",
+                "Guard",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
+              },
+              "parameters": [
+                "BarraSaluteGuard",
+                ">",
+                "0",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Guard",
+                "State",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
