@@ -12,13 +12,52 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Actions below  CROUCH\n"
+      "comment": "Actions below CROUCH (State 10 only)"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "10"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Player",
+            "Animation",
+            "=",
+            "\"Crouch\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "10"
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
             "value": "KeyFromTextPressed"
           },
           "parameters": [
@@ -27,73 +66,15 @@
           ]
         }
       ],
-      "actions": [],
-      "events": [
+      "actions": [
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "FlippableCapability::FlippableBehavior::FlippedX"
-              },
-              "parameters": [
-                "Player",
-                "Flippable"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "Player",
-                "Animation",
-                "=",
-                "\"Crouch\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "FlippableCapability::FlippableBehavior::FlippedX"
-              },
-              "parameters": [
-                "Player",
-                "Flippable"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "Player",
-                "Animation",
-                "=",
-                "\"Crouch\""
-              ]
-            }
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "0"
           ]
         }
       ]
@@ -103,84 +84,115 @@
       "conditions": [
         {
           "type": {
-            "value": "KeyFromTextReleased"
+            "value": "NumberVariable"
           },
           "parameters": [
-            "",
-            "\"Down\""
-          ]
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "FlippableCapability::FlippableBehavior::FlippedX"
-              },
-              "parameters": [
-                "Player",
-                "Flippable"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "Player",
-                "Animation",
-                "=",
-                "\"Idle\""
-              ]
-            }
+            "State",
+            "=",
+            "10"
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "FlippableCapability::FlippableBehavior::FlippedX"
-              },
-              "parameters": [
-                "Player",
-                "Flippable"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "Player",
-                "Animation",
-                "=",
-                "\"Idle\""
-              ]
-            }
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Space"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "2"
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "10"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::IsFalling"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "10"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Player",
+            "GunBulletCounter",
+            ">=",
+            "6"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "State",
+            "=",
+            "11"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ]
 }
