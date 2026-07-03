@@ -6539,6 +6539,38 @@
         "name": "tile00139.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "tile00029.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tile00029.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "tile00140.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tile00140.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "tile00141.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tile00141.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "tile00142.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tile00142.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -10499,11 +10531,11 @@
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.2,
+              "timeBetweenFrames": 0.07142857142857142,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "tile00022.png",
+                  "image": "tile00029.png",
                   "points": [
                     {
                       "name": "Slash1",
@@ -10560,7 +10592,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "tile00108.png",
+                  "image": "tile00140.png",
                   "points": [
                     {
                       "name": "Slash1",
@@ -10617,7 +10649,64 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "tile00109.png",
+                  "image": "tile00141.png",
+                  "points": [
+                    {
+                      "name": "Slash1",
+                      "x": 107.5,
+                      "y": 55
+                    },
+                    {
+                      "name": "WalkDust",
+                      "x": 72.5,
+                      "y": 127
+                    },
+                    {
+                      "name": "JumpDust",
+                      "x": 59,
+                      "y": 127.5
+                    },
+                    {
+                      "name": "GunSmoke",
+                      "x": 117.5,
+                      "y": 72.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 62.5,
+                    "y": 127.5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 62.5,
+                    "y": 88.5
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 39,
+                        "y": 63
+                      },
+                      {
+                        "x": 87.5,
+                        "y": 63
+                      },
+                      {
+                        "x": 89.5,
+                        "y": 128
+                      },
+                      {
+                        "x": 37.5,
+                        "y": 128
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "tile00142.png",
                   "points": [
                     {
                       "name": "Slash1",
