@@ -4150,7 +4150,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Aereoman States",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6808,8 +6807,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "RoboDrone - Unified Damage e RoboDrone FSM",
+          "name": "RoboDrone - Unified Damage e RoboDrone FSM Dispatcher",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -7419,6 +7417,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "RoboDrone",
               "conditions": [
@@ -7446,6 +7445,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "RoboDrone",
               "conditions": [
