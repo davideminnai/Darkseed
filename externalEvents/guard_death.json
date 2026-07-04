@@ -1,7 +1,85 @@
 {
   "associatedLayout": "Testin room",
-  "name": "RoboPatrol_death",
+  "name": "Guard_Death",
   "events": [
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Guard",
+            "Animation",
+            "=",
+            "\"Death\""
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "BarraSaluteGuard",
+                "Guard",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BarraSaluteGuard",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Guard",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
@@ -18,7 +96,7 @@
             "value": "AnimatableCapability::AnimatableBehavior::SetName"
           },
           "parameters": [
-            "RoboPatrol",
+            "Guard",
             "Animation",
             "=",
             "\"Death\""
@@ -29,7 +107,7 @@
             "value": "SetNumberObjectVariable"
           },
           "parameters": [
-            "RoboPatrol",
+            "Guard",
             "DeathAt",
             "=",
             "TimeFromStart()"
@@ -45,7 +123,7 @@
             "value": "NumberObjectVariable"
           },
           "parameters": [
-            "RoboPatrol",
+            "Guard",
             "DeathAt",
             "<=",
             "TimeFromStart()-1"
@@ -63,8 +141,8 @@
               },
               "parameters": [
                 "",
-                "BarraSaluteRoboPatrol",
-                "RoboPatrol",
+                "BarraSaluteGuard",
+                "Guard",
                 ""
               ]
             }
@@ -75,7 +153,7 @@
                 "value": "Delete"
               },
               "parameters": [
-                "BarraSaluteRoboPatrol",
+                "BarraSaluteGuard",
                 ""
               ]
             }
@@ -90,7 +168,7 @@
                 "value": "Delete"
               },
               "parameters": [
-                "RoboPatrol",
+                "Guard",
                 ""
               ]
             }

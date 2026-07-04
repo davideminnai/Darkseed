@@ -1,6 +1,6 @@
 {
   "associatedLayout": "Testin room",
-  "name": "Skel_guard_move",
+  "name": "Guard_Idle",
   "events": [
     {
       "type": "BuiltinCommonInstructions::Comment",
@@ -26,7 +26,7 @@
             "Guard",
             "Animation",
             "=",
-            "\"Walk\""
+            "\"Idle\""
           ]
         }
       ]
@@ -55,17 +55,6 @@
             "Flippable",
             "no"
           ]
-        },
-        {
-          "type": {
-            "value": "AddForceXY"
-          },
-          "parameters": [
-            "Guard",
-            "150",
-            "0",
-            ""
-          ]
         }
       ]
     },
@@ -92,17 +81,6 @@
             "Guard",
             "Flippable",
             "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "AddForceXY"
-          },
-          "parameters": [
-            "Guard",
-            "-150",
-            "0",
-            ""
           ]
         }
       ]
@@ -141,13 +119,24 @@
       "conditions": [
         {
           "type": {
-            "value": "CollisionNP"
+            "value": "Distance"
           },
           "parameters": [
-            "SlashBox",
+            "Player",
             "Guard",
-            "",
-            "",
+            "200",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Distance"
+          },
+          "parameters": [
+            "Player",
+            "Guard",
+            "100",
             ""
           ]
         }
@@ -161,7 +150,7 @@
             "Guard",
             "State",
             "=",
-            "1"
+            "3"
           ]
         }
       ]

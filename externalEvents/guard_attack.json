@@ -1,8 +1,9 @@
 {
   "associatedLayout": "Testin room",
-  "name": "RoboPatrol_attack",
+  "name": "Guard_Attack",
   "events": [
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -11,35 +12,26 @@
             "value": "AnimatableCapability::AnimatableBehavior::SetName"
           },
           "parameters": [
-            "RoboPatrol",
+            "Guard",
             "Animation",
             "=",
-            "\"Shoot\""
+            "\"Smack\""
           ]
         }
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
-        {
-          "type": {
-            "value": "PosX"
-          },
-          "parameters": [
-            "Player",
-            ">",
-            "RoboPatrol.PointX(\"Center\")"
-          ]
-        },
         {
           "type": {
             "value": "Sprite"
           },
           "parameters": [
-            "RoboPatrol",
+            "Guard",
             "=",
-            "1"
+            "4"
           ]
         },
         {
@@ -52,84 +44,38 @@
       "actions": [
         {
           "type": {
-            "value": "FlippableCapability::FlippableBehavior::FlipX"
-          },
-          "parameters": [
-            "RoboPatrol",
-            "Flippable",
-            "no"
-          ]
-        },
-        {
-          "type": {
             "value": "Create"
           },
           "parameters": [
             "",
-            "BulletEnemyGun",
-            "RoboPatrol.PointX(\"GunPoint\")",
-            "RoboPatrol.PointY(\"GunPoint\")",
+            "SlashBoxE",
+            "Guard.PointX(\"Smack\")",
+            "Guard.PointY(\"Smack\")",
             ""
           ]
         },
         {
           "type": {
-            "value": "AddForceXY"
+            "value": "ResetTimer"
           },
           "parameters": [
-            "BulletEnemyGun",
-            "300",
-            "0",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "6d326aaa7459782a48b425e2ff31e4c19473379e431c82cb3c8b3d50fb9540eb_Gun 4.aac",
-            "",
-            "2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "GunParticlesEmitter",
-            "RoboPatrol.PointX(\"GunPoint\")",
-            "RoboPatrol.PointY(\"GunPoint\")",
-            ""
+            "Guard",
+            "\"SmackTimer\""
           ]
         }
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "value": "PosX"
+            "value": "Collision"
           },
           "parameters": [
-            "Player",
-            "<",
-            "RoboPatrol.PointX(\"Center\")"
-          ]
-        },
-        {
-          "type": {
-            "value": "Sprite"
-          },
-          "parameters": [
-            "RoboPatrol",
-            "=",
-            "1"
+            "SlashBoxE",
+            "Player"
           ]
         },
         {
@@ -139,79 +85,20 @@
           "parameters": []
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "FlippableCapability::FlippableBehavior::FlipX"
-          },
-          "parameters": [
-            "RoboPatrol",
-            "Flippable",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "BulletEnemyGun",
-            "RoboPatrol.PointX(\"GunPoint\")",
-            "RoboPatrol.PointY(\"GunPoint\")",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "AddForceXY"
-          },
-          "parameters": [
-            "BulletEnemyGun",
-            "-300",
-            "0",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "6d326aaa7459782a48b425e2ff31e4c19473379e431c82cb3c8b3d50fb9540eb_Gun 4.aac",
-            "",
-            "2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "GunParticlesEmitter",
-            "RoboPatrol.PointX(\"GunPoint\")",
-            "RoboPatrol.PointY(\"GunPoint\")",
-            ""
-          ]
-        }
-      ]
+      "actions": []
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "value": "CollisionNP"
+            "value": "Sprite"
           },
           "parameters": [
-            "BulletEnemyGun",
-            "Player",
-            "",
-            "",
-            ""
+            "Guard",
+            "=",
+            "5"
           ]
         },
         {
@@ -227,10 +114,104 @@
             "value": "Delete"
           },
           "parameters": [
-            "BulletEnemyGun",
+            "SlashBoxE",
             ""
           ]
         },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Guard",
+            "State",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Guard",
+            "Animation",
+            "=",
+            "\"Smack\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Sprite"
+          },
+          "parameters": [
+            "Guard",
+            "=",
+            "4"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "SlashBoxE",
+            "Guard.PointX(\"Smack\")",
+            "Guard.PointY(\"Smack\")",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "Guard",
+            "\"SmackTimer\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Collision"
+          },
+          "parameters": [
+            "SlashBoxE",
+            "Player"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
         {
           "type": {
             "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
@@ -238,7 +219,7 @@
           "parameters": [
             "BarraSalute",
             "-",
-            "1",
+            "10",
             ""
           ]
         }
@@ -252,22 +233,37 @@
             "value": "Sprite"
           },
           "parameters": [
-            "RoboPatrol",
+            "Guard",
             "=",
-            "3"
+            "5"
           ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "SlashBoxE",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "SetNumberObjectVariable"
           },
           "parameters": [
-            "RoboPatrol",
+            "Guard",
             "State",
             "=",
-            "0"
+            "3"
           ]
         }
       ]

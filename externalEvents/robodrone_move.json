@@ -12,7 +12,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Actions below  "
+      "comment": "Actions below"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -58,37 +58,7 @@
             "Pathfinding",
             "",
             "Player.CenterX()",
-            "Player.CenterY() -130"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "SlashBox",
-            "RoboDrone",
-            "",
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "RoboDrone",
-            "State",
-            "=",
-            "1"
+            "Player.CenterY()-130"
           ]
         }
       ]
@@ -118,6 +88,35 @@
             "State",
             "=",
             "2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoboDrone",
+            "HP",
+            "<=",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoboDrone",
+            "State",
+            "=",
+            "1"
           ]
         }
       ]

@@ -6571,6 +6571,30 @@
         "name": "tile00142.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "../../GAMEON/Cyberpunk Platformer Asset Pixel Art/craftpix-net-902201-free-drones-pack-pixel-art/1 Drones/6/Capsule.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "../../GAMEON/Cyberpunk Platformer Asset Pixel Art/craftpix-net-902201-free-drones-pack-pixel-art/1 Drones/6/Capsule.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "tile00030.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tile00030.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "tile00143.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tile00143.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -12958,6 +12982,11 @@
           "name": "Death",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "HP",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -14276,6 +14305,16 @@
           "name": "Death",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "HP",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DeathAt",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -17334,6 +17373,16 @@
           "name": "FootSound",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "HP",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DeathAt",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -18476,6 +18525,21 @@
           "name": "Shoot",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "HP",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DeathAt",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "MaxHP",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -19313,6 +19377,74 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Hurt",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "tile00030.png",
+                  "points": [
+                    {
+                      "name": "Gunpoint",
+                      "x": 23.5,
+                      "y": 35.5
+                    },
+                    {
+                      "name": "BarraSalute",
+                      "x": 24.5,
+                      "y": 4.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "tile00143.png",
+                  "points": [
+                    {
+                      "name": "Gunpoint",
+                      "x": 23.5,
+                      "y": 35.5
+                    },
+                    {
+                      "name": "BarraSalute",
+                      "x": 24.5,
+                      "y": 4.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -19356,7 +19488,7 @@
     },
     {
       "assetStoreId": "6a16d25e5a4b7e16b72187c4cab1164e2e8fba46d78b9af0132f10301b4224e9",
-      "name": "BarraSaluteRoboDrone",
+      "name": "BarraSaluteRoboDrone2",
       "persistentUuid": "3f8db5fe-50be-4fa1-9112-0985679f1870",
       "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
       "variant": "Copper Red Bar",
@@ -21265,6 +21397,48 @@
         "PreviousHighValueDuration": 0,
         "ShowLabel": false
       }
+    },
+    {
+      "assetStoreId": "6a16d25e5a4b7e16b72187c4cab1164e2e8fba46d78b9af0132f10301b4224e9",
+      "name": "BarraSalutePatrol",
+      "persistentUuid": "aef0ef05-397c-45a0-b5ee-f34ce8479c57",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Copper Red Bar",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "MaxValue": 6,
+        "InitialValue": 6,
+        "BarLeftPadding": 9,
+        "BarRightPadding": 9,
+        "BarBottomPadding": 3,
+        "BarTopPadding": 3,
+        "EasingDuration": 0.25,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false
+      }
+    },
+    {
+      "assetStoreId": "6a16d25e5a4b7e16b72187c4cab1164e2e8fba46d78b9af0132f10301b4224e9",
+      "name": "BarraSaluteRoboDrone",
+      "persistentUuid": "6d29be7d-70e0-441d-b14a-aac6f062dae7",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Copper Red Bar",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "MaxValue": 20,
+        "InitialValue": 20,
+        "BarLeftPadding": 9,
+        "BarRightPadding": 9,
+        "BarBottomPadding": 3,
+        "BarTopPadding": 3,
+        "EasingDuration": 0.25,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -21274,13 +21448,19 @@
         "folderName": "BarraEnergiaSalute",
         "children": [
           {
-            "objectName": "BarraSaluteRoboDrone"
+            "objectName": "BarraSaluteRoboDrone2"
           },
           {
             "objectName": "BarraSaluteRoboPatrol"
           },
           {
+            "objectName": "BarraSaluteRoboDrone"
+          },
+          {
             "objectName": "BarraSaluteGuard"
+          },
+          {
+            "objectName": "BarraSalutePatrol"
           },
           {
             "objectName": "BarraSaluteCompanion"
@@ -21484,23 +21664,23 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/skel_guard_idle"
+      "referenceTo": "/externalEvents/guard_idle"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/skel_guard_move"
+      "referenceTo": "/externalEvents/guard_move"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/skel_guard_death"
+      "referenceTo": "/externalEvents/guard_death"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/skel_guard_smack"
+      "referenceTo": "/externalEvents/guard_attack"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/skel_guard_hurt"
+      "referenceTo": "/externalEvents/guard_hurt"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -21537,6 +21717,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/robodrone_death"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/robodrone_hurt"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

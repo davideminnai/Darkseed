@@ -1,6 +1,6 @@
 {
   "associatedLayout": "Testin room",
-  "name": "Skel_guard_idle",
+  "name": "Guard_Move",
   "events": [
     {
       "type": "BuiltinCommonInstructions::Comment",
@@ -15,6 +15,7 @@
       "comment": "Actions below  "
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -26,12 +27,13 @@
             "Guard",
             "Animation",
             "=",
-            "\"Idle\""
+            "\"Walk\""
           ]
         }
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -55,10 +57,22 @@
             "Flippable",
             "no"
           ]
+        },
+        {
+          "type": {
+            "value": "AddForceXY"
+          },
+          "parameters": [
+            "Guard",
+            "150",
+            "0",
+            ""
+          ]
         }
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -82,10 +96,22 @@
             "Flippable",
             "yes"
           ]
+        },
+        {
+          "type": {
+            "value": "AddForceXY"
+          },
+          "parameters": [
+            "Guard",
+            "-150",
+            "0",
+            ""
+          ]
         }
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -119,18 +145,129 @@
       "conditions": [
         {
           "type": {
-            "value": "Distance"
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "SlashBox",
+            "Guard",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Guard",
+            "State",
+            "=",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Guard",
+            "Animation",
+            "=",
+            "\"Walk\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
           },
           "parameters": [
             "Player",
+            ">",
+            "Guard.PointX(\"Center\")"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
             "Guard",
-            "200",
-            ""
+            "Flippable",
+            "no"
           ]
         },
         {
           "type": {
-            "inverted": true,
+            "value": "AddForceXY"
+          },
+          "parameters": [
+            "Guard",
+            "150",
+            "0",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "Player",
+            "<",
+            "Guard.PointX(\"Center\")"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "FlippableCapability::FlippableBehavior::FlipX"
+          },
+          "parameters": [
+            "Guard",
+            "Flippable",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "AddForceXY"
+          },
+          "parameters": [
+            "Guard",
+            "-150",
+            "0",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
             "value": "Distance"
           },
           "parameters": [
@@ -150,7 +287,7 @@
             "Guard",
             "State",
             "=",
-            "3"
+            "2"
           ]
         }
       ]

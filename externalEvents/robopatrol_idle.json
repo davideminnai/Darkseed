@@ -12,7 +12,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Actions below  "
+      "comment": "Actions below"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -90,13 +90,13 @@
       "conditions": [
         {
           "type": {
-            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
+            "value": "NumberObjectVariable"
           },
           "parameters": [
-            "BarraSaluteRoboPatrol",
+            "RoboPatrol",
+            "HP",
             "<=",
-            "0",
-            ""
+            "0"
           ]
         }
       ],
@@ -195,6 +195,11 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ]
 }

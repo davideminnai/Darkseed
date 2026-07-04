@@ -3,18 +3,80 @@
   "name": "RoboDrone_death",
   "events": [
     {
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "RoboDrone",
+      "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "value": "LinkedObjects::PickObjectsLinkedTo"
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
           },
           "parameters": [
-            "",
-            "BarraSaluteRoboDrone",
             "RoboDrone",
-            ""
+            "Animation",
+            "=",
+            "\"Death\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "RoboDrone",
+            "Pathfinding",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "RoboDrone",
+            "TimedBackAndForthMirroredMovement",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "ClearForces"
+          },
+          "parameters": [
+            "RoboDrone"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoboDrone",
+            "DeathAt",
+            "=",
+            "TimeFromStart()"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoboDrone",
+            "DeathAt",
+            "<=",
+            "TimeFromStart()-1"
           ]
         }
       ],
@@ -22,19 +84,20 @@
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "conditions": [
             {
               "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                "value": "LinkedObjects::PickObjectsLinkedTo"
               },
               "parameters": [
+                "",
+                "BarraSaluteRoboDrone",
                 "RoboDrone",
-                "Animation",
-                "=",
-                "\"Death\""
+                ""
               ]
-            },
+            }
+          ],
+          "actions": [
             {
               "type": {
                 "value": "Delete"
@@ -43,46 +106,13 @@
                 "BarraSaluteRoboDrone",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "ActivateBehavior"
-              },
-              "parameters": [
-                "RoboDrone",
-                "Pathfinding",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "ActivateBehavior"
-              },
-              "parameters": [
-                "RoboDrone",
-                "TimedBackAndForthMirroredMovement",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceXY"
-              },
-              "parameters": [
-                "RoboDrone",
-                "0",
-                "300",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ClearForces"
-              },
-              "parameters": [
-                "RoboDrone"
-              ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
             {
               "type": {
                 "value": "Delete"
@@ -95,6 +125,11 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ]
 }

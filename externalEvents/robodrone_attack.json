@@ -3,17 +3,6 @@
   "name": "RoboDrone_attack",
   "events": [
     {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "name": "",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [],
-      "parameters": []
-    },
-    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -79,7 +68,7 @@
             "",
             "BulletEnemyGun",
             "RoboDrone.CenterX()+5",
-            "RoboDrone.CenterY() + 5",
+            "RoboDrone.CenterY()+5",
             ""
           ]
         },
@@ -116,15 +105,6 @@
             "RoboDrone.CenterX()",
             "RoboDrone.CenterY()",
             ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "RoboDrone",
-            "\"AttackCooldown\""
           ]
         }
       ]
@@ -177,8 +157,8 @@
           "parameters": [
             "",
             "BulletEnemyGun",
-            "RoboDrone.PointX(\"GunPoint\")- 65",
-            "RoboDrone.CenterY() + 5",
+            "RoboDrone.PointX(\"GunPoint\")-65",
+            "RoboDrone.CenterY()+5",
             ""
           ]
         },
@@ -216,15 +196,6 @@
             "RoboDrone.CenterY()",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "RoboDrone",
-            "\"AttackCooldown\""
-          ]
         }
       ]
     },
@@ -233,12 +204,14 @@
       "conditions": [
         {
           "type": {
-            "value": "Sprite"
+            "value": "CollisionNP"
           },
           "parameters": [
-            "RoboDrone",
-            "=",
-            "3"
+            "BulletEnemyGun",
+            "Player",
+            "",
+            "",
+            ""
           ]
         },
         {
@@ -249,6 +222,15 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "BulletEnemyGun",
+            ""
+          ]
+        },
         {
           "type": {
             "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
@@ -297,14 +279,13 @@
       "conditions": [
         {
           "type": {
-            "value": "CollisionNP"
+            "value": "NumberObjectVariable"
           },
           "parameters": [
-            "SlashBox",
             "RoboDrone",
-            "",
-            "",
-            ""
+            "HP",
+            "<=",
+            "0"
           ]
         }
       ],

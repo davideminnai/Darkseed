@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.4789341884535483,
+    "zoomFactor": 0.35534345588171595,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -134,23 +134,6 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 186,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Patrol",
-      "persistentUuid": "0467987a-139f-4ef1-881a-84a139effc9c",
-      "width": 152,
-      "x": 343,
-      "y": 478,
-      "zOrder": 4,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
       "height": 214,
       "keepRatio": true,
       "layer": "",
@@ -207,8 +190,8 @@
       "name": "IndustrialStageCollisionMap",
       "persistentUuid": "7e689457-3a35-4240-b19c-7ff3948b51ea",
       "width": 6220,
-      "x": -113,
-      "y": -822,
+      "x": -24,
+      "y": -824,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -543,23 +526,6 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1,
-      "height": 151,
-      "keepRatio": true,
-      "layer": "",
-      "name": "RoboPatrol",
-      "persistentUuid": "8572e1a4-d945-4dee-9957-eb0e323344a8",
-      "width": 148,
-      "x": 1157,
-      "y": 495,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
       "depth": 0,
       "height": 120,
       "keepRatio": true,
@@ -603,6 +569,23 @@
       "x": 2388,
       "y": 402,
       "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 123,
+      "keepRatio": true,
+      "layer": "",
+      "name": "RoboDrone",
+      "persistentUuid": "49de3273-8dbf-479c-b326-0cc37f4dae5d",
+      "width": 106,
+      "x": 358,
+      "y": 291,
+      "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -3541,7 +3524,8 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Player States",
+      "folded": true,
+      "name": "Player FSM",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -3853,6 +3837,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Player is Hurt & Death states",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4113,6 +4098,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Comportamento Generale Bullets del gruppo Munizioni ",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5246,21 +5232,109 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Patrol Enemy Death",
+          "folded": true,
+          "name": "Patrol - Unified Damage senza FSM Dispatcher",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 0,
-                "g": 0,
-                "r": 0,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": ""
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Patrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Patrol",
+                    "HP",
+                    "=",
+                    "10"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "BarraSalutePatrol",
+                        "Patrol.PointX(\"BarraSalute\")",
+                        "Patrol.PointY(\"BarraSalute\")",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "Patrol",
+                        "BarraSalutePatrol"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Patrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "BarraSalutePatrol",
+                    "Patrol",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "BarraSalutePatrol",
+                    "=",
+                    "Patrol.PointX(\"BarraSalute\") -45",
+                    "=",
+                    "Patrol.PointY(\"BarraSalute\") -10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "BarraSalutePatrol",
+                    "=",
+                    "Patrol.Variable(HP)",
+                    ""
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -5280,6 +5354,12 @@
                 },
                 {
                   "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
                     "value": "NumberObjectVariable"
                   },
                   "parameters": [
@@ -5288,12 +5368,6 @@
                     "!=",
                     "2"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
@@ -5308,77 +5382,16 @@
                 },
                 {
                   "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    "TimedBackAndForthMirroredMovement",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AddForceXY"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    "1320",
-                    "-250",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
                     "Patrol",
-                    "State",
-                    "=",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    "Animation",
-                    "=",
-                    "\"Death\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    ""
+                    "HP",
+                    "-",
+                    "8"
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 0,
-                "g": 0,
-                "r": 0,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": ""
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -5398,6 +5411,12 @@
                 },
                 {
                   "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
                     "value": "NumberObjectVariable"
                   },
                   "parameters": [
@@ -5406,12 +5425,6 @@
                     "!=",
                     "2"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
@@ -5426,77 +5439,16 @@
                 },
                 {
                   "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    "TimedBackAndForthMirroredMovement",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AddForceXY"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    "1320",
-                    "-250",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
                     "Patrol",
-                    "State",
-                    "=",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    "Animation",
-                    "=",
-                    "\"Death\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Patrol",
-                    ""
+                    "HP",
+                    "-",
+                    "Bullet.HitPoint"
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 0,
-                "g": 0,
-                "r": 0,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": ""
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -5516,6 +5468,53 @@
                 },
                 {
                   "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Patrol",
+                    "State",
+                    "!=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Patrol",
+                    "HP",
+                    "-",
+                    "Companion.Variable(SlashDamage)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Patrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Patrol",
+                    "HP",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "NumberObjectVariable"
                   },
                   "parameters": [
@@ -5581,7 +5580,7 @@
                     "value": "Wait"
                   },
                   "parameters": [
-                    "2"
+                    "1"
                   ]
                 },
                 {
@@ -5590,6 +5589,15 @@
                   },
                   "parameters": [
                     "Patrol",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "BarraSalutePatrol",
                     ""
                   ]
                 }
@@ -5603,10 +5611,119 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Guard Enemy FSM",
+          "folded": true,
+          "name": "Guard - Unified Damage e Guard FSM Dispatcher",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Guard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "SlashBox",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "HP",
+                    "-",
+                    "8"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "State",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
@@ -5631,11 +5748,12 @@
                   "include": {
                     "includeConfig": 0
                   },
-                  "target": "Skel_guard_idle"
+                  "target": "Guard_Idle"
                 }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Guard",
               "conditions": [
@@ -5658,7 +5776,7 @@
                   "include": {
                     "includeConfig": 0
                   },
-                  "target": "Skel_guard_death"
+                  "target": "Guard_Death"
                 }
               ]
             },
@@ -5686,7 +5804,7 @@
                   "include": {
                     "includeConfig": 0
                   },
-                  "target": "Skel_guard_smack"
+                  "target": "Guard_Attack"
                 }
               ]
             },
@@ -5714,7 +5832,7 @@
                   "include": {
                     "includeConfig": 0
                   },
-                  "target": "Skel_guard_move"
+                  "target": "Guard_Move"
                 }
               ]
             },
@@ -5742,263 +5860,11 @@
                   "include": {
                     "includeConfig": 0
                   },
-                  "target": "Skel_Guard_Hurt"
+                  "target": "Guard_Hurt"
                 }
               ]
             },
             {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Gestione Danno Guard",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Guard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "SlashBox",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "!=",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "BarraSaluteGuard",
-                        "-",
-                        "8",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "=",
-                        "4"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Guard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Bullet",
-                        "Guard",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "!=",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "BarraSaluteGuard",
-                        "-",
-                        "Bullet.HitPoint",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Bullet",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "=",
-                        "4"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Guard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "CompanionSlash",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "!=",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "=",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 0,
-                    "g": 0,
-                    "r": 0,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": ""
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Guard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
-                      },
-                      "parameters": [
-                        "BarraSaluteGuard",
-                        "<=",
-                        "0",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "!=",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "State",
-                        "=",
-                        "1"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Barra Salute Guard",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
-            {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Guard",
               "conditions": [
@@ -6011,7 +5877,19 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "HP",
+                    "=",
+                    "10"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -6044,7 +5922,231 @@
               ]
             },
             {
-              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Guard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "Guard",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "HP",
+                    "-",
+                    "Bullet.HitPoint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "State",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Guard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "CompanionSlash",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "HP",
+                    "-",
+                    "Companion.Variable(SlashDamage)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Guard",
+                        "State",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Guard",
               "conditions": [
@@ -6057,6 +6159,17 @@
                     "BarraSaluteGuard",
                     "Guard",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Guard",
+                    "State",
+                    "!=",
+                    "1"
                   ]
                 }
               ],
@@ -6072,64 +6185,16 @@
                     "=",
                     "Guard.PointY(\"BarraSalute\") -10"
                   ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "Flippable"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "BarraSaluteGuard",
-                        "=",
-                        "Guard.PointX(\"BarraSalute\") -45",
-                        "=",
-                        "Guard.PointY(\"BarraSalute\") -10"
-                      ]
-                    }
-                  ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                      },
-                      "parameters": [
-                        "Guard",
-                        "Flippable"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "BarraSaluteGuard",
-                        "=",
-                        "Guard.PointX(\"BarraSalute\") -50",
-                        "=",
-                        "Guard.PointY(\"BarraSalute\") -10"
-                      ]
-                    }
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "BarraSaluteGuard",
+                    "=",
+                    "Guard.Variable(HP)",
+                    ""
                   ]
                 }
               ]
@@ -6147,156 +6212,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "RoboPatrol Attack  FSM",
+          "folded": true,
+          "name": "RoboPatrol - Unified Damage e RoboPatrol FSM Dispatcher",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "RoboPatrol",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "RoboPatrol",
-                    "State",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "RoboPatrol_idle"
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "RoboPatrol",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "RoboPatrol",
-                    "State",
-                    "=",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "RoboPatrol_death"
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "RoboPatrol",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "RoboPatrol",
-                    "State",
-                    "=",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "RoboPatrol_attack"
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "RoboPatrol",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "RoboPatrol",
-                    "State",
-                    "=",
-                    "3"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "RoboPatrol_move"
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "RoboPatrol",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "RoboPatrol",
-                    "State",
-                    "=",
-                    "4"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "RoboPatrol_Hurt"
-                }
-              ]
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Barra Salute RoboPatrol",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "RoboPatrol",
@@ -6310,7 +6230,19 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "HP",
+                    "=",
+                    "20"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -6343,6 +6275,479 @@
               ]
             },
             {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboPatrol_idle"
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboPatrol_death"
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboPatrol_attack"
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboPatrol_move"
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboPatrol_Hurt"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "SlashBox",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "HP",
+                    "-",
+                    "8"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "State",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "RoboPatrol",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "HP",
+                    "-",
+                    "Bullet.HitPoint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "State",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboPatrol",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "CompanionSlash",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "HP",
+                    "-",
+                    "Companion.Variable(SlashDamage)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboPatrol",
+                        "State",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "RoboPatrol",
               "conditions": [
@@ -6355,6 +6760,17 @@
                     "BarraSaluteRoboPatrol",
                     "RoboPatrol",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboPatrol",
+                    "State",
+                    "!=",
+                    "1"
                   ]
                 }
               ],
@@ -6370,181 +6786,16 @@
                     "=",
                     "RoboPatrol.PointY(\"BarraSalute\") -10"
                   ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                      },
-                      "parameters": [
-                        "RoboPatrol",
-                        "Flippable"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "BarraSaluteRoboPatrol",
-                        "=",
-                        "RoboPatrol.PointX(\"BarraSalute\") -45",
-                        "=",
-                        "RoboPatrol.PointY(\"BarraSalute\") -10"
-                      ]
-                    }
-                  ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                      },
-                      "parameters": [
-                        "RoboPatrol",
-                        "Flippable"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "BarraSaluteRoboPatrol",
-                        "=",
-                        "RoboPatrol.PointX(\"BarraSalute\") -50",
-                        "=",
-                        "RoboPatrol.PointY(\"BarraSalute\") -10"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "RoboPatrol",
-                        "SlashBox",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "BarraSaluteRoboPatrol",
-                        "-",
-                        "8",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "RoboPatrol",
-                        "CompanionSlash",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "RoboPatrol",
-                        "State",
-                        "=",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Bullet",
-                        "RoboPatrol",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "BarraSaluteRoboPatrol",
-                        "-",
-                        "10",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Bullet",
-                        ""
-                      ]
-                    }
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "BarraSaluteRoboPatrol",
+                    "=",
+                    "RoboPatrol.Variable(HP)",
+                    ""
                   ]
                 }
               ]
@@ -6557,76 +6808,130 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "RoboDrone Attack Enemy FSM",
+          "folded": true,
+          "name": "RoboDrone - Unified Damage e RoboDrone FSM",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Barra Salute RoboDrone",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "MaxHP",
+                    "=",
+                    "16"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "HP",
+                    "=",
+                    "RoboDrone.Variable(MaxHP)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "DeathAt",
+                    "=",
+                    "-1"
+                  ]
+                }
+              ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
-                  "conditions": [
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
                     {
                       "type": {
-                        "value": "SceneJustBegins"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "BarraSaluteRoboDrone",
-                            "RoboDrone.PointX(\"BarraSalute\")",
-                            "RoboDrone.PointY(\"BarraSalute\")",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "LinkedObjects::LinkObjects"
-                          },
-                          "parameters": [
-                            "",
-                            "RoboDrone",
-                            "BarraSaluteRoboDrone"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                        "value": "Create"
                       },
                       "parameters": [
                         "",
                         "BarraSaluteRoboDrone",
+                        "RoboDrone.PointX(\"BarraSalute\")",
+                        "RoboDrone.PointY(\"BarraSalute\")",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
                         "RoboDrone",
+                        "BarraSaluteRoboDrone"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "BarraSaluteRoboDrone",
+                    "RoboDrone",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::MaxValue"
+                      },
+                      "parameters": [
+                        "BarraSaluteRoboDrone",
+                        "!=",
+                        "RoboDrone.Variable(MaxHP)",
                         ""
                       ]
                     }
@@ -6634,278 +6939,119 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetXY"
+                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
                       },
                       "parameters": [
                         "BarraSaluteRoboDrone",
                         "=",
-                        "RoboDrone.PointX(\"BarraSalute\") -45",
+                        "RoboDrone.Variable(MaxHP)",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                      },
+                      "parameters": [
+                        "BarraSaluteRoboDrone",
                         "=",
-                        "RoboDrone.PointY(\"BarraSalute\") -10"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                          },
-                          "parameters": [
-                            "RoboDrone",
-                            "Flippable"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "BarraSaluteRoboDrone",
-                            "=",
-                            "RoboDrone.PointX(\"BarraSalute\") -45",
-                            "=",
-                            "RoboDrone.PointY(\"BarraSalute\") -10"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                          },
-                          "parameters": [
-                            "RoboDrone",
-                            "Flippable"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "BarraSaluteRoboDrone",
-                            "=",
-                            "RoboDrone.PointX(\"BarraSalute\") -50",
-                            "=",
-                            "RoboDrone.PointY(\"BarraSalute\") -10"
-                          ]
-                        }
+                        "RoboDrone.Variable(HP)",
+                        ""
                       ]
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 0,
-                    "g": 0,
-                    "r": 0,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
+                  "type": {
+                    "value": "CollisionNP"
                   },
-                  "comment": ""
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "SlashBox",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "State",
-                        "!=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "BarraSaluteRoboDrone",
-                        "-",
-                        "8",
-                        ""
-                      ]
-                    }
+                  "parameters": [
+                    "RoboDrone",
+                    "SlashBox",
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Bullet",
-                        "RoboDrone",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "State",
-                        "!=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "BarraSaluteRoboDrone",
-                        "-",
-                        "Bullet.HitPoint",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Bullet",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "CompanionSlash",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "State",
-                        "!=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "BarraSaluteRoboDrone",
-                        "-",
-                        "Companion.Variable(SlashDamage)",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 0,
-                    "g": 0,
-                    "r": 0,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
+                  "type": {
+                    "value": "NumberObjectVariable"
                   },
-                  "comment": "ddffdddf"
-                },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "HP",
+                    "-",
+                    "8"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
+                        "value": "NumberObjectVariable"
                       },
                       "parameters": [
-                        "BarraSaluteRoboDrone",
+                        "RoboDrone",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboDrone",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboDrone",
+                        "HP",
                         "<=",
-                        "0",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "State",
-                        "!=",
-                        "1"
+                        "0"
                       ]
                     }
                   ],
@@ -6922,33 +7068,62 @@
                       ]
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 0,
-                    "g": 0,
-                    "r": 0,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
+                  "type": {
+                    "value": "CollisionNP"
                   },
-                  "comment": ""
+                  "parameters": [
+                    "Bullet",
+                    "RoboDrone",
+                    "",
+                    "",
+                    ""
+                  ]
                 },
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Stati RoboDrone",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [],
-                  "parameters": []
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "HP",
+                    "-",
+                    "Bullet.HitPoint"
+                  ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
@@ -6956,30 +7131,45 @@
                       },
                       "parameters": [
                         "RoboDrone",
-                        "State",
-                        "=",
+                        "HP",
+                        ">",
                         "0"
                       ]
                     }
                   ],
-                  "actions": [],
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Link",
-                      "include": {
-                        "includeConfig": 0
+                      "type": {
+                        "value": "SetNumberObjectVariable"
                       },
-                      "target": "RoboDrone_idle"
+                      "parameters": [
+                        "RoboDrone",
+                        "State",
+                        "=",
+                        "4"
+                      ]
                     }
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
                         "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboDrone",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
                         "RoboDrone",
@@ -6988,74 +7178,299 @@
                         "1"
                       ]
                     }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Link",
-                      "include": {
-                        "includeConfig": 0
-                      },
-                      "target": "RoboDrone_death"
-                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "CompanionSlash",
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "State",
-                        "=",
-                        "2"
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Link",
-                      "include": {
-                        "includeConfig": 0
-                      },
-                      "target": "RoboDrone_attack"
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "RoboDrone",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "RoboDrone",
-                        "State",
-                        "=",
-                        "3"
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Link",
-                      "include": {
-                        "includeConfig": 0
-                      },
-                      "target": "RoboDrone_move"
-                    }
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "!=",
+                    "1"
                   ]
                 }
               ],
-              "parameters": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "HP",
+                    "-",
+                    "Companion.Variable(SlashDamage)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboDrone",
+                        "HP",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboDrone",
+                        "State",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboDrone",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "RoboDrone",
+                        "State",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "BarraSaluteRoboDrone",
+                    "RoboDrone",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "!=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "BarraSaluteRoboDrone",
+                    "=",
+                    "RoboDrone.PointX(\"BarraSalute\") -45",
+                    "=",
+                    "RoboDrone.PointY(\"BarraSalute\") -10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "BarraSaluteRoboDrone",
+                    "=",
+                    "RoboDrone.Variable(HP)",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboDrone_idle"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboDrone_death"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboDrone_attack"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboDrone_move"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RoboDrone",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoboDrone",
+                    "State",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "RoboDrone_hurt"
+                }
+              ]
             }
           ],
           "parameters": []
@@ -9589,6 +10004,11 @@
           "actions": []
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [

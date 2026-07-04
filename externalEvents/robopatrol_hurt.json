@@ -4,25 +4,90 @@
   "events": [
     {
       "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "RoboPatrol",
+            "Animation",
+            "=",
+            "\"Hurt\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
+            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
           },
           "parameters": [
-            "BarraSaluteRoboPatrol",
+            "RoboPatrol",
+            "Animation"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoboPatrol",
+            "HP",
             "<=",
-            "0",
-            ""
+            "0"
           ]
         }
       ],
       "actions": [
         {
           "type": {
-            "value": "SetNumberVariable"
+            "value": "SetNumberObjectVariable"
           },
           "parameters": [
+            "RoboPatrol",
+            "State",
+            "=",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+          },
+          "parameters": [
+            "RoboPatrol",
+            "Animation"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoboPatrol",
+            "HP",
+            ">",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoboPatrol",
             "State",
             "=",
             "0"
@@ -32,84 +97,8 @@
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "Bullet",
-            "RoboPatrol",
-            "",
-            "",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-          },
-          "parameters": [
-            "BarraSaluteRoboPatrol",
-            "-",
-            "Bullet.HitPoint",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "Bullet",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "RoboPatrol",
-            "SlashBox",
-            "",
-            "",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-          },
-          "parameters": [
-            "BarraSaluteRoboPatrol",
-            "-",
-            "8",
-            ""
-          ]
-        }
-      ]
+      "conditions": [],
+      "actions": []
     }
   ]
 }

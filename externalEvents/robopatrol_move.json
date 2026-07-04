@@ -12,7 +12,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Actions below  "
+      "comment": "Actions below"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -259,36 +259,6 @@
       "conditions": [
         {
           "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "SlashBox",
-            "RoboPatrol",
-            "",
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "RoboPatrol",
-            "State",
-            "=",
-            "1"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
             "value": "Distance"
           },
           "parameters": [
@@ -312,6 +282,40 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoboPatrol",
+            "HP",
+            "<=",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoboPatrol",
+            "State",
+            "=",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ]
 }
