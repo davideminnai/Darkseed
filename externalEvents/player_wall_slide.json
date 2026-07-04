@@ -60,6 +60,16 @@
             "!=",
             "6"
           ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "11"
+          ]
         }
       ],
       "actions": [
@@ -115,6 +125,16 @@
             "!=",
             "6"
           ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "11"
+          ]
         }
       ],
       "actions": [
@@ -161,6 +181,16 @@
             "State",
             "!=",
             "6"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "11"
           ]
         }
       ],
@@ -218,6 +248,16 @@
             "State",
             "!=",
             "6"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "11"
           ]
         }
       ],

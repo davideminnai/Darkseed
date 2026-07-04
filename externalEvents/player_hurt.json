@@ -3,13 +3,39 @@
   "name": "Player_Hurt",
   "events": [
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "PLAYER HURT - TIME DRIVEN (robust)"
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "value": "BuiltinCommonInstructions::Once"
+            "value": "NumberVariable"
           },
-          "parameters": []
+          "parameters": [
+            "State",
+            "=",
+            "9"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "HurtAt",
+            "<",
+            "0"
+          ]
         }
       ],
       "actions": [
@@ -40,6 +66,27 @@
             "CanControl",
             "=",
             "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Player",
+            "isShooting",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "NextShootAt",
+            "=",
+            "TimeFromStart()+0.20"
           ]
         },
         {
@@ -116,11 +163,32 @@
       "conditions": [
         {
           "type": {
-            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+            "value": "NumberVariable"
           },
           "parameters": [
-            "Player",
-            "Animation"
+            "State",
+            "=",
+            "9"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "HurtAt",
+            ">=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "HurtAt",
+            "<=",
+            "TimeFromStart()-0.18"
           ]
         },
         {
@@ -151,6 +219,16 @@
             "value": "SetNumberVariable"
           },
           "parameters": [
+            "HurtAt",
+            "=",
+            "-1"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
             "State",
             "=",
             "0"
@@ -174,6 +252,16 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "HurtAt",
+            "=",
+            "-1"
+          ]
+        },
         {
           "type": {
             "value": "SetNumberVariable"
