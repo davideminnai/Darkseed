@@ -3,49 +3,20 @@
   "name": "Player_Reload",
   "events": [
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Actions below  RELOAD GUN\n"
-    },
-    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "value": "NumberObjectVariable"
-          },
-          "parameters": [
-            "Player",
-            "GunBulletCounter",
-            ">",
-            "6"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetNumberVariable"
+            "value": "NumberVariable"
           },
           "parameters": [
             "State",
             "=",
             "11"
           ]
-        },
+        }
+      ],
+      "actions": [
         {
           "type": {
             "value": "AnimatableCapability::AnimatableBehavior::SetName"
@@ -58,18 +29,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Stop player movement when reloading"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -163,6 +122,17 @@
         },
         {
           "type": {
+            "value": "PlatformBehavior::MaxSpeed"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject",
+            "=",
+            "250"
+          ]
+        },
+        {
+          "type": {
             "value": "SetNumberObjectVariable"
           },
           "parameters": [
@@ -191,17 +161,6 @@
             "State",
             "=",
             "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "PlatformBehavior::MaxSpeed"
-          },
-          "parameters": [
-            "Player",
-            "PlatformerObject",
-            "=",
-            "250"
           ]
         }
       ]

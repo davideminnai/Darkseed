@@ -3,18 +3,6 @@
   "name": "Player_Crouch",
   "events": [
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Actions below CROUCH (State 10 only)"
-    },
-    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -64,6 +52,26 @@
             "",
             "\"Down\""
           ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "9"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "6"
+          ]
         }
       ],
       "actions": [
@@ -99,6 +107,26 @@
           "parameters": [
             "",
             "Space"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "9"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "6"
           ]
         }
       ],
@@ -136,6 +164,26 @@
             "Player",
             "PlatformerObject"
           ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "9"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "6"
+          ]
         }
       ],
       "actions": [
@@ -172,6 +220,26 @@
             "Player",
             "GunBulletCounter",
             ">=",
+            "6"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
+            "9"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "State",
+            "!=",
             "6"
           ]
         }
