@@ -6595,6 +6595,14 @@
         "name": "tile00143.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "4_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "4_1.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },

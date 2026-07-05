@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.39251611754884175,
+    "zoomFactor": 0.7130377630690754,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -58,86 +58,103 @@
   "variables": [
     {
       "name": "State",
+      "persistentUuid": "6262d0f3-a17d-438b-b2e1-7db7000fbd72",
       "type": "number",
       "value": 0
     },
     {
       "name": "ControlMode",
+      "persistentUuid": "a2eeca15-7d98-420e-892a-982f2c08669e",
       "type": "number",
       "value": 0
     },
     {
       "name": "DebugDist",
+      "persistentUuid": "aecf1184-4cb4-4a46-9841-5d74a4dc0b96",
       "type": "number",
       "value": 0
     },
     {
       "name": "Variable",
+      "persistentUuid": "a237ffc8-338a-4ea3-b259-e69ba80784e8",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionLastX",
+      "persistentUuid": "630dc614-453d-4d86-9eef-9403597ef786",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetX",
+      "persistentUuid": "c39af874-37be-4c92-91ec-61e2cd31d4e1",
       "type": "number",
       "value": 0
     },
     {
       "name": "PrevX",
+      "persistentUuid": "521a32d8-4916-4d86-9cbf-5333745d4a27",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionX",
+      "persistentUuid": "ce76772f-965b-42a9-bbf0-4589f892e083",
       "type": "number",
       "value": 0
     },
     {
       "name": "NearestEnemyDist",
+      "persistentUuid": "f980c79a-b86f-4fda-8022-4c2f5111fa79",
       "type": "number",
       "value": 999999
     },
     {
       "name": "TargetEnemyX",
+      "persistentUuid": "d5d65b90-0bcc-4529-984c-29330a9c3514",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetEnemyY",
+      "persistentUuid": "2f028401-2b08-4516-9373-df96975c1e8c",
       "type": "number",
       "value": 0
     },
     {
       "name": "HitAt",
+      "persistentUuid": "d405fc07-a9eb-4ab0-a5c8-118b3119e205",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanControl",
+      "persistentUuid": "2a0821c3-c5b4-44df-8297-b7f93e686103",
       "type": "number",
       "value": 0
     },
     {
       "name": "BlinkAt",
+      "persistentUuid": "731bff3a-e9d4-4758-8aae-d37123a8418b",
       "type": "number",
       "value": 0
     },
     {
       "name": "HurtAt",
+      "persistentUuid": "1a4119c3-9f65-4e16-b59e-0562b4d1e6ec",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanStateUpdate",
+      "persistentUuid": "d70e72d1-4cc4-4bf6-8661-bedb66fb9485",
       "type": "number",
       "value": 0
     },
     {
       "name": "NextShootAt",
+      "persistentUuid": "808613ad-9902-4a21-b4fb-6f9979e0f691",
       "type": "number",
       "value": 0
     }
@@ -2901,6 +2918,73 @@
         "lineHeight": 0,
         "color": "0;0;0"
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "GunRevolver",
+      "persistentUuid": "fe6fb34d-5eb5-44f6-ae49-3e178010fcc9",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "4_1.png",
+                  "points": [
+                    {
+                      "name": "GunMuzzle",
+                      "x": 10.5,
+                      "y": 2.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 2,
+                    "y": 5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 2,
+                    "y": 5
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 11,
+                        "y": 0
+                      },
+                      {
+                        "x": 11,
+                        "y": 7
+                      },
+                      {
+                        "x": 0,
+                        "y": 7
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3020,6 +3104,9 @@
       },
       {
         "objectName": "DebugTimer"
+      },
+      {
+        "objectName": "GunRevolver"
       }
     ]
   },
@@ -3171,6 +3258,94 @@
               "parameters": [
                 "Player"
               ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "GunRevolver",
+                    "=",
+                    "Player.PointX(\"GunHand\")",
+                    "=",
+                    "Player.PointY(\"GunHand\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "GunRevolver",
+                    "Player.PointX(\"GunAim\")",
+                    "Player.PointY(\"GunAim\")",
+                    "0",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "GunRevolver",
+                    "=",
+                    "Player.PointX(\"GunHand\")",
+                    "=",
+                    "Player.PointY(\"GunHand\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "GunRevolver",
+                    "Player.PointX(\"GunAim\")",
+                    "Player.PointY(\"GunAim\")",
+                    "0",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ]
         },
