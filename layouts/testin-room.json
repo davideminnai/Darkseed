@@ -3162,6 +3162,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Player MAIN - Complete FSM + Unified Damage (SMART)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3261,87 +3262,6 @@
             }
           ],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                  },
-                  "parameters": [
-                    "Player",
-                    "Flippable"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "GunRevolver",
-                    "=",
-                    "Player.PointX(\"GunHand\")",
-                    "=",
-                    "Player.PointY(\"GunHand\")"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "RotateTowardPosition"
-                  },
-                  "parameters": [
-                    "GunRevolver",
-                    "Player.PointX(\"GunAim\")",
-                    "Player.PointY(\"GunAim\")",
-                    "0",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
-                  },
-                  "parameters": [
-                    "Player",
-                    "Flippable"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "GunRevolver",
-                    "=",
-                    "Player.PointX(\"GunHand\")",
-                    "=",
-                    "Player.PointY(\"GunHand\")"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "RotateTowardPosition"
-                  },
-                  "parameters": [
-                    "GunRevolver",
-                    "Player.PointX(\"GunAim\")",
-                    "Player.PointY(\"GunAim\")",
-                    "0",
-                    ""
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
