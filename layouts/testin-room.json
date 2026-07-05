@@ -3046,8 +3046,8 @@
                   "centerPoint": {
                     "automatic": false,
                     "name": "centre",
-                    "x": 14.5,
-                    "y": 4
+                    "x": 9.5,
+                    "y": 6
                   },
                   "customCollisionMask": [
                     [
@@ -3113,8 +3113,8 @@
                   "centerPoint": {
                     "automatic": false,
                     "name": "centre",
-                    "x": 14.5,
-                    "y": 4
+                    "x": 11.5,
+                    "y": 8.5
                   },
                   "customCollisionMask": [
                     [
@@ -3987,7 +3987,7 @@
               "parameters": [
                 "WeaponMag",
                 "=",
-                "1"
+                "5"
               ]
             },
             {
@@ -4088,7 +4088,7 @@
               "parameters": [
                 "WeaponMag",
                 "=",
-                "1"
+                "9"
               ]
             },
             {
@@ -4189,7 +4189,7 @@
               "parameters": [
                 "WeaponMag",
                 "=",
-                "1"
+                "10"
               ]
             },
             {
@@ -4699,7 +4699,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Player MAIN - Complete FSM + Unified Damage (SMART)",
+      "name": "Player MAIN - Complete FSM + Unified Damage ",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [

@@ -33,7 +33,7 @@
             "Player",
             "Animation",
             "=",
-            "VariableString(WeaponShootAnim)"
+            "\"Shoot\""
           ]
         }
       ]
@@ -82,20 +82,19 @@
               "parameters": [
                 "",
                 "BulletRevolver",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "GunRevolver.PointX(\"GunMuzzle\")",
+                "GunRevolver.PointY(\"GunMuzzle\")",
                 ""
               ]
             },
             {
               "type": {
-                "value": "AddForceTowardPosition"
+                "value": "AddForceXY"
               },
               "parameters": [
                 "BulletRevolver",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
                 "WeaponBulletSpeed",
+                "0",
                 "1"
               ]
             }
@@ -123,187 +122,65 @@
               "parameters": [
                 "",
                 "BulletShotgunA",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "Player.PointX(\"GunMuzzle\")",
+                "Player.PointY(\"GunMuzzle\")",
                 ""
               ]
             },
             {
               "type": {
-                "value": "RotateTowardPosition"
+                "value": "AddForceXY"
               },
               "parameters": [
                 "BulletShotgunA",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
+                "WeaponBulletSpeed",
+                "10",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "BulletShotgunB",
+                "Player.PointX(\"GunMuzzle\")",
+                "Player.PointY(\"GunMuzzle\")",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "BulletShotgunB",
+                "WeaponBulletSpeed",
                 "0",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "BulletShotgunC",
+                "Player.PointX(\"GunMuzzle\")",
+                "Player.PointY(\"GunMuzzle\")",
                 ""
               ]
             },
             {
               "type": {
-                "value": "Rotate"
+                "value": "AddForceXY"
               },
               "parameters": [
-                "BulletShotgunA",
+                "BulletShotgunC",
+                "WeaponBulletSpeed",
                 "-10",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "BulletShotgunA",
-                "BulletShotgunA.Angle()",
-                "WeaponBulletSpeed",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "BulletShotgunB",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "RotateTowardPosition"
-              },
-              "parameters": [
-                "BulletShotgunB",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
-                "0",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "BulletShotgunB",
-                "BulletShotgunB.Angle()",
-                "WeaponBulletSpeed",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "BulletShotgunC",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "RotateTowardPosition"
-              },
-              "parameters": [
-                "BulletShotgunC",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
-                "0",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Rotate"
-              },
-              "parameters": [
-                "BulletShotgunC",
-                "+10",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "BulletShotgunC",
-                "BulletShotgunC.Angle()",
-                "WeaponBulletSpeed",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "CurrentWeaponId",
-                "=",
-                "1"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "BulletShotgunA",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "BulletShotgunA",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "BulletShotgunA",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceTowardPosition"
-              },
-              "parameters": [
-                "BulletShotgunA",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
-                "WeaponBulletSpeed",
                 "1"
               ]
             }
@@ -331,20 +208,19 @@
               "parameters": [
                 "",
                 "BulletRifle",
-                "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "Player.PointX(\"GunMuzzle\")",
+                "Player.PointY(\"GunMuzzle\")",
                 ""
               ]
             },
             {
               "type": {
-                "value": "AddForceTowardPosition"
+                "value": "AddForceXY"
               },
               "parameters": [
                 "BulletRifle",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
                 "WeaponBulletSpeed",
+                "0",
                 "1"
               ]
             }
