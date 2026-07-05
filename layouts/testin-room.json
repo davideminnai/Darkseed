@@ -50,7 +50,7 @@
           "name": "BulletEnemyGun"
         },
         {
-          "name": "Bullet"
+          "name": "BulletRevolver"
         }
       ]
     }
@@ -58,103 +58,126 @@
   "variables": [
     {
       "name": "State",
-      "persistentUuid": "6262d0f3-a17d-438b-b2e1-7db7000fbd72",
       "type": "number",
       "value": 0
     },
     {
       "name": "ControlMode",
-      "persistentUuid": "a2eeca15-7d98-420e-892a-982f2c08669e",
       "type": "number",
       "value": 0
     },
     {
       "name": "DebugDist",
-      "persistentUuid": "aecf1184-4cb4-4a46-9841-5d74a4dc0b96",
       "type": "number",
       "value": 0
     },
     {
       "name": "Variable",
-      "persistentUuid": "a237ffc8-338a-4ea3-b259-e69ba80784e8",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionLastX",
-      "persistentUuid": "630dc614-453d-4d86-9eef-9403597ef786",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetX",
-      "persistentUuid": "c39af874-37be-4c92-91ec-61e2cd31d4e1",
       "type": "number",
       "value": 0
     },
     {
       "name": "PrevX",
-      "persistentUuid": "521a32d8-4916-4d86-9cbf-5333745d4a27",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionX",
-      "persistentUuid": "ce76772f-965b-42a9-bbf0-4589f892e083",
       "type": "number",
       "value": 0
     },
     {
       "name": "NearestEnemyDist",
-      "persistentUuid": "f980c79a-b86f-4fda-8022-4c2f5111fa79",
       "type": "number",
       "value": 999999
     },
     {
       "name": "TargetEnemyX",
-      "persistentUuid": "d5d65b90-0bcc-4529-984c-29330a9c3514",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetEnemyY",
-      "persistentUuid": "2f028401-2b08-4516-9373-df96975c1e8c",
       "type": "number",
       "value": 0
     },
     {
       "name": "HitAt",
-      "persistentUuid": "d405fc07-a9eb-4ab0-a5c8-118b3119e205",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanControl",
-      "persistentUuid": "2a0821c3-c5b4-44df-8297-b7f93e686103",
       "type": "number",
       "value": 0
     },
     {
       "name": "BlinkAt",
-      "persistentUuid": "731bff3a-e9d4-4758-8aae-d37123a8418b",
       "type": "number",
       "value": 0
     },
     {
       "name": "HurtAt",
-      "persistentUuid": "1a4119c3-9f65-4e16-b59e-0562b4d1e6ec",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanStateUpdate",
-      "persistentUuid": "d70e72d1-4cc4-4bf6-8661-bedb66fb9485",
       "type": "number",
       "value": 0
     },
     {
       "name": "NextShootAt",
-      "persistentUuid": "808613ad-9902-4a21-b4fb-6f9979e0f691",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "CurrentWeaponId",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "WeaponDamage",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Variable2",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "WeaponFireDelay",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "WeaponBulletSpeed",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "WeaponAmmoCost",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "WeaponShootAnim",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "WeaponMag",
       "type": "number",
       "value": 0
     }
@@ -613,8 +636,8 @@
       "name": "RoboPatrol",
       "persistentUuid": "339b94b3-6d77-4385-9f06-2b1568fc7d24",
       "width": 150,
-      "x": 344,
-      "y": 492,
+      "x": 1092,
+      "y": 486,
       "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
@@ -1787,7 +1810,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "00c58eed5a99b943df281578eff34893ff9201ba3efa09e7fcdbdd075526a2a6",
-      "name": "Bullet",
+      "name": "BulletRevolver",
       "persistentUuid": "fdf45703-44d3-4934-8a61-ea4954e81989",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -2985,6 +3008,476 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "GunShotgun",
+      "persistentUuid": "71a35bbd-5620-4d60-80b3-4037feb60cd9",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "3_1.png",
+                  "points": [
+                    {
+                      "name": "GunMuzzle",
+                      "x": 26.5,
+                      "y": 2.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 2,
+                    "y": 5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 4
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 27,
+                        "y": 0
+                      },
+                      {
+                        "x": 27,
+                        "y": 9
+                      },
+                      {
+                        "x": 0,
+                        "y": 9
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "GunRifle",
+      "persistentUuid": "829a1bf1-1304-4794-baa3-8618688e6e27",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "4_2.png",
+                  "points": [
+                    {
+                      "name": "GunMuzzle",
+                      "x": 28.5,
+                      "y": 2.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 11.5,
+                    "y": 8.5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 4
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 29,
+                        "y": 0
+                      },
+                      {
+                        "x": 29,
+                        "y": 11
+                      },
+                      {
+                        "x": 0,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "00c58eed5a99b943df281578eff34893ff9201ba3efa09e7fcdbdd075526a2a6",
+      "name": "BulletShotgunA",
+      "persistentUuid": "ed788b05-acb2-495a-9acb-f8f3805aad27",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "HitPoint",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Bullet.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 11
+                      },
+                      {
+                        "x": 5,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "00c58eed5a99b943df281578eff34893ff9201ba3efa09e7fcdbdd075526a2a6",
+      "name": "BulletRifle",
+      "persistentUuid": "3a98c4ed-a3b0-4c00-b3ef-3b7ea3f6043f",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "HitPoint",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Bullet.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 11
+                      },
+                      {
+                        "x": 5,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "00c58eed5a99b943df281578eff34893ff9201ba3efa09e7fcdbdd075526a2a6",
+      "name": "BulletGranade",
+      "persistentUuid": "3fa56ff2-982e-400f-8fd4-8a4bb876f13f",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "HitPoint",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Bullet.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 11
+                      },
+                      {
+                        "x": 5,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "00c58eed5a99b943df281578eff34893ff9201ba3efa09e7fcdbdd075526a2a6",
+      "name": "BulletShotgunB",
+      "persistentUuid": "54a07542-4459-4fd6-b275-1ea6d25c450c",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "HitPoint",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Bullet.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 11
+                      },
+                      {
+                        "x": 5,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "00c58eed5a99b943df281578eff34893ff9201ba3efa09e7fcdbdd075526a2a6",
+      "name": "BulletShotgunC",
+      "persistentUuid": "dc5ecaa4-dd34-4926-83a5-2a794ace57f6",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "HitPoint",
+          "persistentUuid": "66610493-c4af-4360-abf1-5e6dcaeb93c3",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Bullet.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 11
+                      },
+                      {
+                        "x": 5,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2994,7 +3487,22 @@
         "folderName": "Ammo",
         "children": [
           {
-            "objectName": "Bullet"
+            "objectName": "BulletRevolver"
+          },
+          {
+            "objectName": "BulletGranade"
+          },
+          {
+            "objectName": "BulletRifle"
+          },
+          {
+            "objectName": "BulletShotgunA"
+          },
+          {
+            "objectName": "BulletShotgunB"
+          },
+          {
+            "objectName": "BulletShotgunC"
           },
           {
             "objectName": "BulletEnemyGun"
@@ -3107,6 +3615,12 @@
       },
       {
         "objectName": "GunRevolver"
+      },
+      {
+        "objectName": "GunShotgun"
+      },
+      {
+        "objectName": "GunRifle"
       }
     ]
   },
@@ -3162,7 +3676,1029 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
+      "name": "Player MAIN - WEAPON CORE (GENERALIZED)",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "INIT"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "NextShootAt",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponDamage",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponFireDelay",
+                "=",
+                "0.14"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponBulletSpeed",
+                "=",
+                "300"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponAmmoCost",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "WeaponShootAnim",
+                "=",
+                "\"Shoot_Pistol\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "GunRevolver",
+                "Player.PointX(\"GunHand\")",
+                "Player.PointY(\"GunHand\")",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "GunShotgun",
+                "Player.PointX(\"GunHand\")",
+                "Player.PointY(\"GunHand\")",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "GunRifle",
+                "Player.PointX(\"GunHand\")",
+                "Player.PointY(\"GunHand\")",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "WEAPON SWITCH TEST (1/2/3)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Num1\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Num2\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Num3\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "EQUIP PROFILE (per frame)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponDamage",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponFireDelay",
+                "=",
+                "0.14"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponBulletSpeed",
+                "=",
+                "300"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponAmmoCost",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "WeaponShootAnim",
+                "=",
+                "\"Shoot_Pistol\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponMag",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "GunRevolver"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunShotgun"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunRifle"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponDamage",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponFireDelay",
+                "=",
+                "0.45"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponBulletSpeed",
+                "=",
+                "240"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponAmmoCost",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "WeaponShootAnim",
+                "=",
+                "\"Shoot_Shotgun\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponMag",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunRevolver"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "GunShotgun"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunRifle"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponDamage",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponFireDelay",
+                "=",
+                "0.08"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponBulletSpeed",
+                "=",
+                "360"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponAmmoCost",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "WeaponShootAnim",
+                "=",
+                "\"Shoot_Rifle\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponMag",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunRevolver"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunShotgun"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "GunRifle"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "FOLLOW + AIM + FLIP"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "GunRevolver",
+                "=",
+                "Player.PointX(\"GunHand\")",
+                "=",
+                "Player.PointY(\"GunHand\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "GunShotgun",
+                "=",
+                "Player.PointX(\"GunHand\")",
+                "=",
+                "Player.PointY(\"GunHand\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "GunRifle",
+                "=",
+                "Player.PointX(\"GunHand\")",
+                "=",
+                "Player.PointY(\"GunHand\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "GunRevolver",
+                "Player.PointX(\"GunAim\")",
+                "Player.PointY(\"GunAim\")",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "GunShotgun",
+                "Player.PointX(\"GunAim\")",
+                "Player.PointY(\"GunAim\")",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "GunRifle",
+                "Player.PointX(\"GunAim\")",
+                "Player.PointY(\"GunAim\")",
+                "0",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "GunRevolver",
+                    "Flippable",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "GunShotgun",
+                    "Flippable",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "GunRifle",
+                    "Flippable",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "GunRevolver",
+                    "Flippable",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "GunShotgun",
+                    "Flippable",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "GunRifle",
+                    "Flippable",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "GLOBAL SHOOT ROUTER (run&gun aware)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "v"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CanControl",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "9"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "11"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "NextShootAt",
+                "<=",
+                "TimeFromStart()"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "GunBulletCounter",
+                "<",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "TextForGunAmmunition",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "isShooting",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "isShooting",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "NextShootAt",
+                "=",
+                "TimeFromStart()+WeaponFireDelay"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "State",
+                "=",
+                "12"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "v"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CanControl",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "9"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "11"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "NextShootAt",
+                "<=",
+                "TimeFromStart()"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "GunBulletCounter",
+                "<",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "TextForGunAmmunition",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "isShooting",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "isShooting",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "NextShootAt",
+                "=",
+                "TimeFromStart()+WeaponFireDelay"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "State",
+                "=",
+                "8"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "name": "Player MAIN - Complete FSM + Unified Damage (SMART)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4800,6 +6336,36 @@
               "target": "Player_Reload"
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "=",
+                "12"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "Player_RunShoot"
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "parameters": []
@@ -5933,6 +7499,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Enemies",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6112,7 +7679,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     "Patrol",
                     "",
                     "",
@@ -6143,7 +7710,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     ""
                   ]
                 },
@@ -6155,7 +7722,7 @@
                     "Patrol",
                     "HP",
                     "-",
-                    "Bullet.HitPoint"
+                    "BulletRevolver.HitPoint"
                   ]
                 }
               ]
@@ -6640,7 +8207,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     "Guard",
                     "",
                     "",
@@ -6674,7 +8241,7 @@
                     "Guard",
                     "HP",
                     "-",
-                    "Bullet.HitPoint"
+                    "BulletRevolver.HitPoint"
                   ]
                 },
                 {
@@ -6682,7 +8249,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     ""
                   ]
                 }
@@ -6922,6 +8489,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "RoboPatrol - Unified Damage e RoboPatrol FSM Dispatcher",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7240,7 +8808,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     "RoboPatrol",
                     "",
                     "",
@@ -7274,7 +8842,7 @@
                     "RoboPatrol",
                     "HP",
                     "-",
-                    "Bullet.HitPoint"
+                    "BulletRevolver.HitPoint"
                   ]
                 },
                 {
@@ -7282,7 +8850,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     ""
                   ]
                 }
@@ -7789,7 +9357,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     "RoboDrone",
                     "",
                     "",
@@ -7817,7 +9385,7 @@
                     "RoboDrone",
                     "HP",
                     "-",
-                    "Bullet.HitPoint"
+                    "BulletRevolver.HitPoint"
                   ]
                 },
                 {
@@ -7825,7 +9393,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Bullet",
+                    "BulletRevolver",
                     ""
                   ]
                 }
