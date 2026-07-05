@@ -6851,6 +6851,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -6908,6 +6918,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -6965,6 +6985,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 52.5,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -7022,6 +7052,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 52.5,
+                      "y": 102
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -7079,6 +7119,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 102
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -7136,6 +7186,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 102.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -7205,6 +7265,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 82,
+                      "y": 82
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 87.5,
+                      "y": 69.5
                     }
                   ],
                   "originPoint": {
@@ -7262,6 +7332,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 82,
+                      "y": 82
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 87.5,
+                      "y": 69.5
                     }
                   ],
                   "originPoint": {
@@ -7319,6 +7399,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 82,
+                      "y": 82
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 87.5,
+                      "y": 69.5
                     }
                   ],
                   "originPoint": {
@@ -7376,6 +7466,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 82.5,
+                      "y": 72
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 82,
+                      "y": 64
                     }
                   ],
                   "originPoint": {
@@ -7433,6 +7533,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 78,
+                      "y": 70
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 76,
+                      "y": 63
                     }
                   ],
                   "originPoint": {
@@ -7490,6 +7600,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 82,
+                      "y": 82
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 87.5,
+                      "y": 69.5
                     }
                   ],
                   "originPoint": {
@@ -7547,6 +7667,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 76.5,
+                      "y": 87
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 83,
+                      "y": 78
                     }
                   ],
                   "originPoint": {
@@ -7604,6 +7734,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 72,
+                      "y": 90
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 81,
+                      "y": 90
                     }
                   ],
                   "originPoint": {
@@ -7661,6 +7801,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 64,
+                      "y": 96
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 71.5,
+                      "y": 101
                     }
                   ],
                   "originPoint": {
@@ -7718,6 +7868,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 50.5,
+                      "y": 93.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 50,
+                      "y": 103
                     }
                   ],
                   "originPoint": {
@@ -7775,6 +7935,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 48,
+                      "y": 95
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 48,
+                      "y": 103.5
                     }
                   ],
                   "originPoint": {
@@ -7832,6 +8002,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 64.5,
+                      "y": 97.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 72,
+                      "y": 103
                     }
                   ],
                   "originPoint": {
@@ -7842,8 +8022,8 @@
                   "centerPoint": {
                     "automatic": false,
                     "name": "centre",
-                    "x": 62.5,
-                    "y": 88.5
+                    "x": 65,
+                    "y": 90
                   },
                   "customCollisionMask": [
                     [
@@ -7901,6 +8081,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 55,
+                      "y": 59.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 61.5,
+                      "y": 50
                     }
                   ],
                   "originPoint": {
@@ -7958,6 +8148,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 66.5,
+                      "y": 50
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 78,
+                      "y": 51
                     }
                   ],
                   "originPoint": {
@@ -8015,6 +8215,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 67.5,
+                      "y": 56
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 78,
+                      "y": 57
                     }
                   ],
                   "originPoint": {
@@ -8072,6 +8282,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 66.5,
+                      "y": 58
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 74,
+                      "y": 64.5
                     }
                   ],
                   "originPoint": {
@@ -8129,6 +8349,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 76.5,
+                      "y": 56
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 66,
+                      "y": 53
                     }
                   ],
                   "originPoint": {
@@ -8186,6 +8416,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 67,
+                      "y": 46.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 78,
+                      "y": 46.5
                     }
                   ],
                   "originPoint": {
@@ -8243,6 +8483,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 68,
+                      "y": 52.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 60.5,
+                      "y": 49
                     }
                   ],
                   "originPoint": {
@@ -8312,6 +8562,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 56,
+                      "y": 45.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 62.5,
+                      "y": 51
                     }
                   ],
                   "originPoint": {
@@ -8369,6 +8629,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 55,
+                      "y": 48
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 63,
+                      "y": 51
                     }
                   ],
                   "originPoint": {
@@ -8426,6 +8696,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 56,
+                      "y": 51
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 65.5,
+                      "y": 46
                     }
                   ],
                   "originPoint": {
@@ -8483,6 +8763,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 55.5,
+                      "y": 69
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 63.5,
+                      "y": 68.5
                     }
                   ],
                   "originPoint": {
@@ -8541,30 +8831,40 @@
                     },
                     {
                       "name": "WalkDust",
-                      "x": 72.5,
-                      "y": 127
+                      "x": 43,
+                      "y": 70.5
                     },
                     {
                       "name": "JumpDust",
-                      "x": 59,
-                      "y": 127.5
+                      "x": 42.5,
+                      "y": 67
                     },
                     {
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 30.5,
+                      "y": 39
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 26.5,
+                      "y": 48
                     }
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 62.5,
-                    "y": 127.5
+                    "x": 34,
+                    "y": 63.5
                   },
                   "centerPoint": {
                     "automatic": false,
                     "name": "centre",
-                    "x": 62.5,
-                    "y": 88.5
+                    "x": 35.5,
+                    "y": 47
                   },
                   "customCollisionMask": [
                     [
@@ -8623,6 +8923,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -8680,6 +8990,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -8737,6 +9057,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -8794,6 +9124,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -8851,6 +9191,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -8920,6 +9270,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 57.5,
+                      "y": 103
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 63,
+                      "y": 109.5
                     }
                   ],
                   "originPoint": {
@@ -8977,6 +9337,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 55,
+                      "y": 119
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 63,
+                      "y": 121.5
                     }
                   ],
                   "originPoint": {
@@ -9034,6 +9404,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 57,
+                      "y": 127.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 67.5,
+                      "y": 128
                     }
                   ],
                   "originPoint": {
@@ -9091,6 +9471,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 57,
+                      "y": 127.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 67.5,
+                      "y": 128
                     }
                   ],
                   "originPoint": {
@@ -9148,6 +9538,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 57,
+                      "y": 127.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 67.5,
+                      "y": 128
                     }
                   ],
                   "originPoint": {
@@ -9218,6 +9618,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9293,6 +9703,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9368,6 +9788,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9443,6 +9873,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9518,6 +9958,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9593,6 +10043,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9668,6 +10128,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9743,6 +10213,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9818,6 +10298,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9893,6 +10383,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -9968,6 +10468,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10043,6 +10553,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10118,6 +10638,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10193,6 +10723,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10268,6 +10808,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10343,6 +10893,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10418,6 +10978,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10493,6 +11063,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -10580,6 +11160,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 58,
+                      "y": 106.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 60,
+                      "y": 113
                     }
                   ],
                   "originPoint": {
@@ -10637,6 +11227,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 56,
+                      "y": 106
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 59.5,
+                      "y": 115.5
                     }
                   ],
                   "originPoint": {
@@ -10694,6 +11294,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 52,
+                      "y": 105.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 54,
+                      "y": 113.5
                     }
                   ],
                   "originPoint": {
@@ -10751,6 +11361,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 48,
+                      "y": 105
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 50,
+                      "y": 113.5
                     }
                   ],
                   "originPoint": {
@@ -10820,6 +11440,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 61,
+                      "y": 105
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 61,
+                      "y": 114
                     }
                   ],
                   "originPoint": {
@@ -10877,6 +11507,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 57.5,
+                      "y": 107
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 58,
+                      "y": 115
                     }
                   ],
                   "originPoint": {
@@ -10934,6 +11574,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 51.5,
+                      "y": 106
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 115
                     }
                   ],
                   "originPoint": {
@@ -10991,6 +11641,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 49.5,
+                      "y": 105
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 50,
+                      "y": 114
                     }
                   ],
                   "originPoint": {
@@ -11048,6 +11708,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 47,
+                      "y": 104.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 47.5,
+                      "y": 113.5
                     }
                   ],
                   "originPoint": {
@@ -11105,6 +11775,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 54,
+                      "y": 111.5
                     }
                   ],
                   "originPoint": {
@@ -11162,6 +11842,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 62.5,
+                      "y": 104.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 66,
+                      "y": 113
                     }
                   ],
                   "originPoint": {
@@ -11219,6 +11909,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 70.5,
+                      "y": 103.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 73.5,
+                      "y": 110
                     }
                   ],
                   "originPoint": {
@@ -11276,6 +11976,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 73.5,
+                      "y": 103.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 79,
+                      "y": 109
                     }
                   ],
                   "originPoint": {
@@ -11333,6 +12043,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 71,
+                      "y": 104.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 75.5,
+                      "y": 109.5
                     }
                   ],
                   "originPoint": {
@@ -11390,6 +12110,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 66.5,
+                      "y": 106
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 70,
+                      "y": 112.5
                     }
                   ],
                   "originPoint": {
@@ -11447,6 +12177,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 65.5,
+                      "y": 105.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 71,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11516,6 +12256,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11573,6 +12323,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11630,6 +12390,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11687,6 +12457,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11744,6 +12524,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11801,6 +12591,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11858,6 +12658,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11915,6 +12725,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -11972,6 +12792,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 53,
+                      "y": 112
                     }
                   ],
                   "originPoint": {
@@ -12041,6 +12871,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 53,
+                      "y": 104
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 60,
+                      "y": 108
                     }
                   ],
                   "originPoint": {
@@ -12098,6 +12938,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 56,
+                      "y": 102
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 65,
+                      "y": 104
                     }
                   ],
                   "originPoint": {
@@ -12155,6 +13005,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 57.5,
+                      "y": 107
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 65,
+                      "y": 107.5
                     }
                   ],
                   "originPoint": {
@@ -12224,6 +13084,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 86,
+                      "y": 76
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 99.5,
+                      "y": 73
                     }
                   ],
                   "originPoint": {
@@ -12281,6 +13151,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 86,
+                      "y": 72.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 99,
+                      "y": 64.5
                     }
                   ],
                   "originPoint": {
@@ -12338,6 +13218,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 86,
+                      "y": 72
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 98,
+                      "y": 63
                     }
                   ],
                   "originPoint": {
@@ -12394,6 +13284,16 @@
                     {
                       "name": "GunSmoke",
                       "x": 117.5,
+                      "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 86,
+                      "y": 76
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 99,
                       "y": 72.5
                     }
                   ],
@@ -12464,6 +13364,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 70,
+                      "y": 86.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 81,
+                      "y": 81
                     }
                   ],
                   "originPoint": {
@@ -12474,8 +13384,8 @@
                   "centerPoint": {
                     "automatic": false,
                     "name": "centre",
-                    "x": 62.5,
-                    "y": 88.5
+                    "x": 63,
+                    "y": 86
                   },
                   "customCollisionMask": [
                     [
@@ -12521,6 +13431,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 78,
+                      "y": 65
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 73,
+                      "y": 74
                     }
                   ],
                   "originPoint": {
@@ -12578,6 +13498,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 69,
+                      "y": 74
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 72.5,
+                      "y": 63
                     }
                   ],
                   "originPoint": {
@@ -12635,6 +13565,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 72,
+                      "y": 59.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 69,
+                      "y": 74
                     }
                   ],
                   "originPoint": {
@@ -12692,6 +13632,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 69,
+                      "y": 74
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 71.5,
+                      "y": 60.5
                     }
                   ],
                   "originPoint": {
@@ -12749,6 +13699,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 69,
+                      "y": 74
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 72,
+                      "y": 60.5
                     }
                   ],
                   "originPoint": {
@@ -12806,6 +13766,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 69,
+                      "y": 74
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 73.5,
+                      "y": 58
                     }
                   ],
                   "originPoint": {
@@ -12863,6 +13833,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 77,
+                      "y": 96.5
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 86.5,
+                      "y": 101.5
                     }
                   ],
                   "originPoint": {
@@ -12920,6 +13900,16 @@
                       "name": "GunSmoke",
                       "x": 117.5,
                       "y": 72.5
+                    },
+                    {
+                      "name": "GunHand",
+                      "x": 79.5,
+                      "y": 96
+                    },
+                    {
+                      "name": "GunAim",
+                      "x": 90,
+                      "y": 101.5
                     }
                   ],
                   "originPoint": {
