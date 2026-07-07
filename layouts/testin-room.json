@@ -58,157 +58,157 @@
   "variables": [
     {
       "name": "State",
-      "persistentUuid": "276d5cc0-9f49-4700-ba13-172ab2da3fa5",
+      "persistentUuid": "adbee676-310a-43c1-999d-629e7305c354",
       "type": "number",
       "value": 0
     },
     {
       "name": "ControlMode",
-      "persistentUuid": "40017f93-6365-44bd-a979-36861109061a",
+      "persistentUuid": "5e69a640-1ad1-4c4e-81bb-07db963b3964",
       "type": "number",
       "value": 0
     },
     {
       "name": "DebugDist",
-      "persistentUuid": "c93d9bed-5bec-4f69-8d8e-9cf88018905e",
+      "persistentUuid": "b3676415-fe31-457c-912e-bc2358739d44",
       "type": "number",
       "value": 0
     },
     {
       "name": "Variable",
-      "persistentUuid": "f35f75dd-462e-4956-aef9-f40531fa96cb",
+      "persistentUuid": "cf6575ba-9471-4c5f-85ee-475ebd3431cc",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionLastX",
-      "persistentUuid": "1c9b3b4a-2f0a-469c-8063-03c23a48931f",
+      "persistentUuid": "00db72b3-edfe-4cfb-a2ed-35f9b03394df",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetX",
-      "persistentUuid": "790dc57d-1d75-4af1-9273-8645ff2c100a",
+      "persistentUuid": "56551729-3859-479b-a0b1-89404aa854c7",
       "type": "number",
       "value": 0
     },
     {
       "name": "PrevX",
-      "persistentUuid": "3743117a-4744-4c78-a525-e576a63756c2",
+      "persistentUuid": "ee32b09c-13c2-49c1-9658-5b24d549f69a",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionX",
-      "persistentUuid": "0e241e9f-9869-4604-aafe-ff6112a77e09",
+      "persistentUuid": "638e0e60-a467-4330-b60a-d790985e803f",
       "type": "number",
       "value": 0
     },
     {
       "name": "NearestEnemyDist",
-      "persistentUuid": "4474cb62-f09a-4f82-8ee1-15bde26a1120",
+      "persistentUuid": "88623961-8cd4-444c-bcbf-107d73cdb80a",
       "type": "number",
       "value": 999999
     },
     {
       "name": "TargetEnemyX",
-      "persistentUuid": "4fee6de1-1167-4ccb-8638-255772f69424",
+      "persistentUuid": "868943b0-7686-41b3-ae68-d248238718dc",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetEnemyY",
-      "persistentUuid": "9c9ed029-787b-48e5-aafa-5e4214fc0844",
+      "persistentUuid": "fd14051b-eec1-4ec9-821f-8f9cbac4123c",
       "type": "number",
       "value": 0
     },
     {
       "name": "HitAt",
-      "persistentUuid": "7d083ac7-0d04-489c-8d90-6e24bea01695",
+      "persistentUuid": "4e0bfc81-c4bd-43d5-8e55-b0b6dec3ac88",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanControl",
-      "persistentUuid": "a3e02523-8def-423c-91e0-9911bc37477d",
+      "persistentUuid": "7bc1e4ec-146e-491d-b6bc-94c71de134fd",
       "type": "number",
       "value": 0
     },
     {
       "name": "BlinkAt",
-      "persistentUuid": "164f1a83-e1fb-4133-acb6-4209ccf4efb4",
+      "persistentUuid": "ed305f6a-ea48-4df8-a35e-f4e33023cf23",
       "type": "number",
       "value": 0
     },
     {
       "name": "HurtAt",
-      "persistentUuid": "df4be6c0-483c-499f-ab8f-2a6dc89b983b",
+      "persistentUuid": "85c50e32-fef6-4699-978b-4f6084eab629",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanStateUpdate",
-      "persistentUuid": "6ca67d2e-1ffc-419d-94cf-523ee4fddc1d",
+      "persistentUuid": "8a7f014b-51dd-4c4c-861e-511ff87934ec",
       "type": "number",
       "value": 0
     },
     {
       "name": "NextShootAt",
-      "persistentUuid": "05056b5b-98f6-4729-a758-467560f6380c",
+      "persistentUuid": "296aa432-4c5a-4782-850d-033c1bfea860",
       "type": "number",
       "value": 0
     },
     {
       "name": "CurrentWeaponId",
-      "persistentUuid": "0f8fb9e2-53a7-4ac6-acf5-ef4deadbc3d2",
+      "persistentUuid": "8660902b-bfcf-43f4-93af-9e8454f72d6b",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponDamage",
-      "persistentUuid": "68de5baa-b710-460f-a9a0-13506f9e5446",
+      "persistentUuid": "0ee79afc-29ed-4150-addc-2455f7602e80",
       "type": "number",
       "value": 0
     },
     {
       "name": "Variable2",
-      "persistentUuid": "6c7926fb-eb45-4c03-991c-6fba03ed6594",
+      "persistentUuid": "9ec024c0-7323-4335-875f-f3afac9cfa10",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponFireDelay",
-      "persistentUuid": "64bbe51b-0dd6-4479-8958-19c16b7f90a9",
+      "persistentUuid": "2b671420-e00b-42fa-b655-fb2cc0f54f03",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponBulletSpeed",
-      "persistentUuid": "b0748625-0990-4fac-a729-ea97be9c2270",
+      "persistentUuid": "95d08461-d8f6-4ca2-a34b-a0dce751f34f",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponAmmoCost",
-      "persistentUuid": "0cc4b6a8-de8f-401b-a06c-0c0fed064449",
+      "persistentUuid": "4c8c082e-5f0f-48cf-97d0-78550b510616",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponShootAnim",
-      "persistentUuid": "4fb181c4-d8c9-4abb-a800-ef787b60d15e",
+      "persistentUuid": "19e11ed2-fb2f-4db3-b0a4-c7eb2ceeacda",
       "type": "string",
       "value": ""
     },
     {
       "name": "WeaponMag",
-      "persistentUuid": "1a5e9daa-e27e-462c-8437-e9c75f5f5a7e",
+      "persistentUuid": "416fa667-59cd-4b1a-870e-01fbafbe2c16",
       "type": "number",
       "value": 0
     },
     {
       "name": "LastWeaponId",
-      "persistentUuid": "cdaa6cb5-41cc-4fc3-8821-e7e894c7babd",
+      "persistentUuid": "1322f925-f4c9-417f-a9d9-c5ac4d6c43fe",
       "type": "number",
       "value": 0
     }
@@ -3576,6 +3576,74 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "00c58eed5a99b943df281578eff34893ff9201ba3efa09e7fcdbdd075526a2a6",
+      "name": "BulletRay",
+      "persistentUuid": "2add7d7a-598a-48f5-aa99-c9fc30eba6ae",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "HitPoint",
+          "persistentUuid": "8092368a-1623-43c8-bfd9-09993e49ad14",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Bullet.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 7
+                      },
+                      {
+                        "x": 10,
+                        "y": 11
+                      },
+                      {
+                        "x": 5,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3586,6 +3654,9 @@
         "children": [
           {
             "objectName": "BulletRevolver"
+          },
+          {
+            "objectName": "BulletRay"
           },
           {
             "objectName": "BulletGranade"
@@ -3777,7 +3848,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Player MAIN - Complete FSM + Unified Damage ",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6586,11 +6656,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
     }
   ],
   "layers": [
