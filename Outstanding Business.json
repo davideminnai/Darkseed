@@ -17852,7 +17852,7 @@
                     {
                       "name": "GunAim",
                       "x": 53,
-                      "y": 112
+                      "y": 116.5
                     }
                   ],
                   "originPoint": {
@@ -17919,7 +17919,7 @@
                     {
                       "name": "GunAim",
                       "x": 53,
-                      "y": 112
+                      "y": 116
                     }
                   ],
                   "originPoint": {
@@ -17986,7 +17986,7 @@
                     {
                       "name": "GunAim",
                       "x": 52.5,
-                      "y": 112
+                      "y": 116
                     }
                   ],
                   "originPoint": {
@@ -18053,7 +18053,7 @@
                     {
                       "name": "GunAim",
                       "x": 53,
-                      "y": 112
+                      "y": 116
                     }
                   ],
                   "originPoint": {
@@ -18120,7 +18120,7 @@
                     {
                       "name": "GunAim",
                       "x": 53,
-                      "y": 112
+                      "y": 116
                     }
                   ],
                   "originPoint": {
@@ -18187,7 +18187,7 @@
                     {
                       "name": "GunAim",
                       "x": 53,
-                      "y": 112
+                      "y": 116
                     }
                   ],
                   "originPoint": {
@@ -24075,7 +24075,7 @@
                     {
                       "name": "GunSmoke",
                       "x": 117.5,
-                      "y": 72.5
+                      "y": 72
                     },
                     {
                       "name": "GunHand",
@@ -24084,8 +24084,8 @@
                     },
                     {
                       "name": "GunAim",
-                      "x": 99.5,
-                      "y": 73
+                      "x": 106.5,
+                      "y": 72
                     }
                   ],
                   "originPoint": {
@@ -24151,8 +24151,8 @@
                     },
                     {
                       "name": "GunAim",
-                      "x": 99,
-                      "y": 64.5
+                      "x": 99.5,
+                      "y": 65.5
                     }
                   ],
                   "originPoint": {
@@ -24218,8 +24218,8 @@
                     },
                     {
                       "name": "GunAim",
-                      "x": 98,
-                      "y": 63
+                      "x": 101,
+                      "y": 61.5
                     }
                   ],
                   "originPoint": {
@@ -24285,7 +24285,7 @@
                     },
                     {
                       "name": "GunAim",
-                      "x": 99,
+                      "x": 108,
                       "y": 72.5
                     }
                   ],
@@ -69711,6 +69711,18 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/player_gun_shooting"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/player_main_weapon_core"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/player_companion"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/enemies"
     }
   ],
   "eventsFunctionsExtensions": [
