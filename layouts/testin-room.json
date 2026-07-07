@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.7130377630690754,
+    "zoomFactor": 0.08258739885902792,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -58,157 +58,462 @@
   "variables": [
     {
       "name": "State",
-      "persistentUuid": "adbee676-310a-43c1-999d-629e7305c354",
       "type": "number",
       "value": 0
     },
     {
       "name": "ControlMode",
-      "persistentUuid": "5e69a640-1ad1-4c4e-81bb-07db963b3964",
       "type": "number",
       "value": 0
     },
     {
       "name": "DebugDist",
-      "persistentUuid": "b3676415-fe31-457c-912e-bc2358739d44",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "name": "Variable",
-      "persistentUuid": "cf6575ba-9471-4c5f-85ee-475ebd3431cc",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionLastX",
-      "persistentUuid": "00db72b3-edfe-4cfb-a2ed-35f9b03394df",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetX",
-      "persistentUuid": "56551729-3859-479b-a0b1-89404aa854c7",
       "type": "number",
       "value": 0
     },
     {
       "name": "PrevX",
-      "persistentUuid": "ee32b09c-13c2-49c1-9658-5b24d549f69a",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionX",
-      "persistentUuid": "638e0e60-a467-4330-b60a-d790985e803f",
       "type": "number",
       "value": 0
     },
     {
       "name": "NearestEnemyDist",
-      "persistentUuid": "88623961-8cd4-444c-bcbf-107d73cdb80a",
       "type": "number",
       "value": 999999
     },
     {
       "name": "TargetEnemyX",
-      "persistentUuid": "868943b0-7686-41b3-ae68-d248238718dc",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetEnemyY",
-      "persistentUuid": "fd14051b-eec1-4ec9-821f-8f9cbac4123c",
       "type": "number",
       "value": 0
     },
     {
       "name": "HitAt",
-      "persistentUuid": "4e0bfc81-c4bd-43d5-8e55-b0b6dec3ac88",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanControl",
-      "persistentUuid": "7bc1e4ec-146e-491d-b6bc-94c71de134fd",
       "type": "number",
       "value": 0
     },
     {
       "name": "BlinkAt",
-      "persistentUuid": "ed305f6a-ea48-4df8-a35e-f4e33023cf23",
       "type": "number",
       "value": 0
     },
     {
       "name": "HurtAt",
-      "persistentUuid": "85c50e32-fef6-4699-978b-4f6084eab629",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanStateUpdate",
-      "persistentUuid": "8a7f014b-51dd-4c4c-861e-511ff87934ec",
       "type": "number",
       "value": 0
     },
     {
       "name": "NextShootAt",
-      "persistentUuid": "296aa432-4c5a-4782-850d-033c1bfea860",
       "type": "number",
       "value": 0
     },
     {
       "name": "CurrentWeaponId",
-      "persistentUuid": "8660902b-bfcf-43f4-93af-9e8454f72d6b",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponDamage",
-      "persistentUuid": "0ee79afc-29ed-4150-addc-2455f7602e80",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "name": "Variable2",
-      "persistentUuid": "9ec024c0-7323-4335-875f-f3afac9cfa10",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponFireDelay",
-      "persistentUuid": "2b671420-e00b-42fa-b655-fb2cc0f54f03",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponBulletSpeed",
-      "persistentUuid": "95d08461-d8f6-4ca2-a34b-a0dce751f34f",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponAmmoCost",
-      "persistentUuid": "4c8c082e-5f0f-48cf-97d0-78550b510616",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponShootAnim",
-      "persistentUuid": "19e11ed2-fb2f-4db3-b0a4-c7eb2ceeacda",
       "type": "string",
       "value": ""
     },
     {
       "name": "WeaponMag",
-      "persistentUuid": "416fa667-59cd-4b1a-870e-01fbafbe2c16",
       "type": "number",
       "value": 0
     },
     {
       "name": "LastWeaponId",
-      "persistentUuid": "1322f925-f4c9-417f-a9d9-c5ac4d6c43fe",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Weapons",
+      "type": "structure",
+      "children": [
+        {
+          "name": "0",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Pistol"
+            },
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "FireDelay",
+              "type": "number",
+              "value": 0.14
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 300
+            },
+            {
+              "name": "Mag",
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ReloadTime",
+              "type": "number",
+              "value": 1.2
+            },
+            {
+              "name": "Spread",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Pellets",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ShootAnim",
+              "type": "string",
+              "value": "Shoot_Pistol"
+            },
+            {
+              "name": "BulletObject",
+              "type": "string",
+              "value": "BulletRevolver"
+            },
+            {
+              "name": "ShootSfx",
+              "type": "string",
+              "value": "sfx_pistol"
+            },
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Shotgun"
+            },
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "FireDelay",
+              "type": "number",
+              "value": 0.45
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 240
+            },
+            {
+              "name": "Mag",
+              "type": "number",
+              "value": 9
+            },
+            {
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ReloadTime",
+              "type": "number",
+              "value": 1.8
+            },
+            {
+              "name": "Spread",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "Pellets",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ShootAnim",
+              "type": "string",
+              "value": "Shoot_Shotgun"
+            },
+            {
+              "name": "BulletObject",
+              "type": "string",
+              "value": "BulletShotgunA"
+            },
+            {
+              "name": "ShootSfx",
+              "type": "string",
+              "value": "sfx_shotgun"
+            },
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "2",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Rifle"
+            },
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "FireDelay",
+              "type": "number",
+              "value": 0.08
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 360
+            },
+            {
+              "name": "Mag",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ReloadTime",
+              "type": "number",
+              "value": 1.4
+            },
+            {
+              "name": "Spread",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "Pellets",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ShootAnim",
+              "type": "string",
+              "value": "Shoot_Rifle"
+            },
+            {
+              "name": "BulletObject",
+              "type": "string",
+              "value": "BulletRifle"
+            },
+            {
+              "name": "ShootSfx",
+              "type": "string",
+              "value": "sfx_rifle"
+            },
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "3",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Ray"
+            },
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "FireDelay",
+              "type": "number",
+              "value": 0.1
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 540
+            },
+            {
+              "name": "Mag",
+              "type": "number",
+              "value": 6
+            },
+            {
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "ReloadTime",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "Spread",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Pellets",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ShootAnim",
+              "type": "string",
+              "value": "Shoot_Ray"
+            },
+            {
+              "name": "BulletObject",
+              "type": "string",
+              "value": "BulletRay"
+            },
+            {
+              "name": "ShootSfx",
+              "type": "string",
+              "value": "sfx_ray"
+            },
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IsReloading",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "CurrentMagAmmo",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "ReserveAmmo",
+      "type": "structure",
+      "children": [
+        {
+          "name": "0",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "1",
+          "type": "number",
+          "value": 36
+        },
+        {
+          "name": "2",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "3",
+          "type": "number",
+          "value": 24
+        }
+      ]
+    },
+    {
+      "name": "WeaponShootSfx",
+      "type": "string",
+      "value": 0
+    },
+    {
+      "name": "WeaponBulletObject",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "WeaponMode",
       "type": "number",
       "value": 0
     }
@@ -3517,7 +3822,14 @@
       "persistentUuid": "069ab19c-399a-432c-b26a-350d28fe7caf",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "gunmag",
+          "persistentUuid": "0729ba37-6c5e-43a2-a1e7-aa9f7749a969",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -3862,7 +4174,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Init runtime vars"
+          "comment": "Init runtime vars "
         },
         {
           "type": "BuiltinCommonInstructions::Standard",

@@ -405,6 +405,18 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "suono dell'arma "
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -466,7 +478,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "RELOAD LOGIC: Triggered when GunBulletCounter >= 6 OR WeaponMag <= 0"
+      "comment": "RELOAD LOGIC: Triggered when GunBulletCounter >= 6 "
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
