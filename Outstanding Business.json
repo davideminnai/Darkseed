@@ -17587,6 +17587,20 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Pet Cats/Cat 6/f43fb537167de1b88010dc41e6617098f243526bc6a6853875ba6a36310c79bf_Cat 6_Walk_8.png",
           "name": "Cat 6_Walk_8.png"
         }
+      },
+      {
+        "file": "assets/Gun 2.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "265701b04cb41976c67820a196c0b3cbc2f98351032b9e710b853da1a5b7ff02_Gun 2.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Western FPS 2D/Sound/265701b04cb41976c67820a196c0b3cbc2f98351032b9e710b853da1a5b7ff02_Gun 2.aac",
+          "name": "gdevelop-asset-store"
+        }
       }
     ]
   },

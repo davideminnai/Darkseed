@@ -185,9 +185,19 @@
           "type": "structure",
           "children": [
             {
-              "name": "Name",
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "BulletObject",
               "type": "string",
-              "value": "Pistol"
+              "value": "BulletRevolver"
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 300
             },
             {
               "name": "Damage",
@@ -200,17 +210,22 @@
               "value": 0.14
             },
             {
-              "name": "BulletSpeed",
-              "type": "number",
-              "value": 300
-            },
-            {
               "name": "Mag",
               "type": "number",
               "value": 5
             },
             {
-              "name": "AmmoCost",
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Pistol"
+            },
+            {
+              "name": "Pellets",
               "type": "number",
               "value": 1
             },
@@ -220,24 +235,9 @@
               "value": 1.2
             },
             {
-              "name": "Spread",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "Pellets",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "ShootAnim",
               "type": "string",
               "value": "Shoot_Pistol"
-            },
-            {
-              "name": "BulletObject",
-              "type": "string",
-              "value": "BulletRevolver"
             },
             {
               "name": "ShootSfx",
@@ -245,7 +245,7 @@
               "value": "sfx_pistol"
             },
             {
-              "name": "Mode",
+              "name": "Spread",
               "type": "number",
               "value": 0
             }
@@ -256,9 +256,19 @@
           "type": "structure",
           "children": [
             {
-              "name": "Name",
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "BulletObject",
               "type": "string",
-              "value": "Shotgun"
+              "value": "BulletShotgunA"
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 240
             },
             {
               "name": "Damage",
@@ -271,17 +281,22 @@
               "value": 0.45
             },
             {
-              "name": "BulletSpeed",
-              "type": "number",
-              "value": 240
-            },
-            {
               "name": "Mag",
               "type": "number",
               "value": 9
             },
             {
-              "name": "AmmoCost",
+              "name": "Mode",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Shotgun"
+            },
+            {
+              "name": "Pellets",
               "type": "number",
               "value": 1
             },
@@ -291,24 +306,9 @@
               "value": 1.8
             },
             {
-              "name": "Spread",
-              "type": "number",
-              "value": 10
-            },
-            {
-              "name": "Pellets",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "ShootAnim",
               "type": "string",
               "value": "Shoot_Shotgun"
-            },
-            {
-              "name": "BulletObject",
-              "type": "string",
-              "value": "BulletShotgunA"
             },
             {
               "name": "ShootSfx",
@@ -316,9 +316,9 @@
               "value": "sfx_shotgun"
             },
             {
-              "name": "Mode",
+              "name": "Spread",
               "type": "number",
-              "value": 1
+              "value": 10
             }
           ]
         },
@@ -327,9 +327,19 @@
           "type": "structure",
           "children": [
             {
-              "name": "Name",
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "BulletObject",
               "type": "string",
-              "value": "Rifle"
+              "value": "BulletRifle"
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 360
             },
             {
               "name": "Damage",
@@ -342,17 +352,22 @@
               "value": 0.08
             },
             {
-              "name": "BulletSpeed",
-              "type": "number",
-              "value": 360
-            },
-            {
               "name": "Mag",
               "type": "number",
               "value": 10
             },
             {
-              "name": "AmmoCost",
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Rifle"
+            },
+            {
+              "name": "Pellets",
               "type": "number",
               "value": 1
             },
@@ -362,24 +377,9 @@
               "value": 1.4
             },
             {
-              "name": "Spread",
-              "type": "number",
-              "value": 2
-            },
-            {
-              "name": "Pellets",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "ShootAnim",
               "type": "string",
               "value": "Shoot_Rifle"
-            },
-            {
-              "name": "BulletObject",
-              "type": "string",
-              "value": "BulletRifle"
             },
             {
               "name": "ShootSfx",
@@ -387,9 +387,9 @@
               "value": "sfx_rifle"
             },
             {
-              "name": "Mode",
+              "name": "Spread",
               "type": "number",
-              "value": 0
+              "value": 2
             }
           ]
         },
@@ -398,9 +398,19 @@
           "type": "structure",
           "children": [
             {
-              "name": "Name",
+              "name": "AmmoCost",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "BulletObject",
               "type": "string",
-              "value": "Ray"
+              "value": "BulletRay"
+            },
+            {
+              "name": "BulletSpeed",
+              "type": "number",
+              "value": 540
             },
             {
               "name": "Damage",
@@ -413,29 +423,19 @@
               "value": 0.1
             },
             {
-              "name": "BulletSpeed",
-              "type": "number",
-              "value": 540
-            },
-            {
               "name": "Mag",
               "type": "number",
               "value": 6
             },
             {
-              "name": "AmmoCost",
+              "name": "Mode",
               "type": "number",
               "value": 2
             },
             {
-              "name": "ReloadTime",
-              "type": "number",
-              "value": 1.6
-            },
-            {
-              "name": "Spread",
-              "type": "number",
-              "value": 0
+              "name": "Name",
+              "type": "string",
+              "value": "Ray"
             },
             {
               "name": "Pellets",
@@ -443,14 +443,14 @@
               "value": 1
             },
             {
+              "name": "ReloadTime",
+              "type": "number",
+              "value": 1.6
+            },
+            {
               "name": "ShootAnim",
               "type": "string",
               "value": "Shoot_Ray"
-            },
-            {
-              "name": "BulletObject",
-              "type": "string",
-              "value": "BulletRay"
             },
             {
               "name": "ShootSfx",
@@ -458,9 +458,9 @@
               "value": "sfx_ray"
             },
             {
-              "name": "Mode",
+              "name": "Spread",
               "type": "number",
-              "value": 2
+              "value": 0
             }
           ]
         }
@@ -505,7 +505,7 @@
     {
       "name": "WeaponShootSfx",
       "type": "string",
-      "value": 0
+      "value": "0"
     },
     {
       "name": "WeaponBulletObject",
@@ -5407,74 +5407,6 @@
               },
               "parameters": [
                 "SlashBoxE"
-              ]
-            }
-          ]
-        },
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"t\""
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "State",
-                "!=",
-                "6"
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "State",
-                "!=",
-                "9"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "isShooting",
-                "False",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "HurtAt",
-                "=",
-                "-1"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "State",
-                "=",
-                "9"
               ]
             }
           ]

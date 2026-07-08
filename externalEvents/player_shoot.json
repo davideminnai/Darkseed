@@ -426,7 +426,7 @@
               },
               "parameters": [
                 "",
-                "6d326aaa7459782a48b425e2ff31e4c19473379e431c82cb3c8b3d50fb9540eb_Gun 4.aac",
+                "265701b04cb41976c67820a196c0b3cbc2f98351032b9e710b853da1a5b7ff02_Gun 2.aac",
                 "",
                 "5",
                 ""
@@ -478,7 +478,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "RELOAD LOGIC: Triggered when GunBulletCounter >= 6 "
+      "comment": "RELOAD LOGIC: Triggered when GunBulletCounter >= WeaponMag "
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -500,7 +500,7 @@
             "Player",
             "GunBulletCounter",
             ">=",
-            "6"
+            "WeaponMag"
           ]
         }
       ],
@@ -548,7 +548,7 @@
             "Player",
             "GunBulletCounter",
             "<",
-            "6"
+            "WeaponMag"
           ]
         }
       ],
