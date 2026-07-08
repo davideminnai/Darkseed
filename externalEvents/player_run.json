@@ -247,12 +247,6 @@
         },
         {
           "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        },
-        {
-          "type": {
             "value": "NumberVariable"
           },
           "parameters": [
@@ -378,12 +372,6 @@
             "False",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         },
         {
           "type": {

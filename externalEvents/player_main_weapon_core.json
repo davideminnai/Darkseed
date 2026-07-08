@@ -73,6 +73,16 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
+                "WeaponMag",
+                "=",
+                "Variable(Weapons.0.Mag)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
                 "LastWeaponId",
                 "=",
                 "-1"
@@ -119,21 +129,19 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "LastWeaponId",
+                "WeaponMag",
                 "=",
-                "-1"
+                "Variable(Weapons.0.Mag)"
               ]
             },
             {
               "type": {
-                "value": "Create"
+                "value": "SetNumberVariable"
               },
               "parameters": [
-                "",
-                "GunRevolver",
-                "Player.PointX(\"GunHand\")",
-                "Player.PointY(\"GunHand\")",
-                ""
+                "LastWeaponId",
+                "=",
+                "-1"
               ]
             }
           ]
@@ -167,21 +175,19 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "LastWeaponId",
+                "WeaponMag",
                 "=",
-                "-1"
+                "Variable(Weapons.1.Mag)"
               ]
             },
             {
               "type": {
-                "value": "Create"
+                "value": "SetNumberVariable"
               },
               "parameters": [
-                "",
-                "GunShotgun",
-                "Player.PointX(\"GunHand\")",
-                "Player.PointY(\"GunHand\")",
-                ""
+                "LastWeaponId",
+                "=",
+                "-1"
               ]
             }
           ]
@@ -215,21 +221,19 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "LastWeaponId",
+                "WeaponMag",
                 "=",
-                "-1"
+                "Variable(Weapons.2.Mag)"
               ]
             },
             {
               "type": {
-                "value": "Create"
+                "value": "SetNumberVariable"
               },
               "parameters": [
-                "",
-                "GunRifle",
-                "Player.PointX(\"GunHand\")",
-                "Player.PointY(\"GunHand\")",
-                ""
+                "LastWeaponId",
+                "=",
+                "-1"
               ]
             }
           ]
@@ -263,21 +267,127 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "LastWeaponId",
+                "WeaponMag",
                 "=",
-                "-1"
+                "Variable(Weapons.3.Mag)"
               ]
             },
             {
               "type": {
-                "value": "Create"
+                "value": "SetNumberVariable"
               },
               "parameters": [
-                "",
-                "GunRay",
-                "Player.PointX(\"GunHand\")",
-                "Player.PointY(\"GunHand\")",
-                ""
+                "LastWeaponId",
+                "=",
+                "-1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponMag",
+                "=",
+                "Variable(Weapons.0.Mag)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponMag",
+                "=",
+                "Variable(Weapons.1.Mag)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponMag",
+                "=",
+                "Variable(Weapons.2.Mag)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CurrentWeaponId",
+                "=",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponMag",
+                "=",
+                "Variable(Weapons.3.Mag)"
               ]
             }
           ]
@@ -424,7 +534,8 @@
                 "value": "Show"
               },
               "parameters": [
-                "GunRevolver"
+                "GunRevolver",
+                ""
               ]
             },
             {
@@ -432,8 +543,22 @@
                 "value": "Hide"
               },
               "parameters": [
-                "GunShotgun",
-                "GunRifle",
+                "GunShotgun"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunRifle"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
                 "GunRay"
               ]
             }
@@ -600,6 +725,14 @@
                 "GunRifle",
                 "GunRay"
               ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunRay"
+              ]
             }
           ]
         },
@@ -762,6 +895,14 @@
                 "value": "Hide"
               },
               "parameters": [
+                "GunShotgun"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
                 "GunRay"
               ]
             }
@@ -906,6 +1047,14 @@
             },
             {
               "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "GunRay"
+              ]
+            },
+            {
+              "type": {
                 "value": "Hide"
               },
               "parameters": [
@@ -916,10 +1065,18 @@
             },
             {
               "type": {
-                "value": "Show"
+                "value": "Hide"
               },
               "parameters": [
-                "GunRay"
+                "GunRifle"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "GunShotgun"
               ]
             }
           ]
@@ -1417,6 +1574,16 @@
           "conditions": [
             {
               "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "=",
+                "-999"
+              ]
+            },
+            {
+              "type": {
                 "value": "KeyPressed"
               },
               "parameters": [
@@ -1581,6 +1748,16 @@
               },
               "parameters": [
                 "State",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
                 "!=",
                 "6"
               ]
@@ -1658,6 +1835,7 @@
             },
             {
               "type": {
+                "inverted": true,
                 "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
               },
               "parameters": [

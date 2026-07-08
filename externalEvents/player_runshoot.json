@@ -7,6 +7,16 @@
       "conditions": [
         {
           "type": {
+            "value": "Sprite"
+          },
+          "parameters": [
+            "Player",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": []
@@ -29,16 +39,6 @@
     {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
-        {
-          "type": {
-            "value": "Sprite"
-          },
-          "parameters": [
-            "Player",
-            "=",
-            "1"
-          ]
-        },
         {
           "type": {
             "value": "BuiltinCommonInstructions::Once"
@@ -71,20 +71,65 @@
                 "",
                 "BulletRevolver",
                 "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "Player.PointY(\"GunSmoke\")",
                 ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletRevolver",
+                    "WeaponBulletSpeed * -1",
+                    "0",
+                    "1"
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "AddForceTowardPosition"
-              },
-              "parameters": [
-                "BulletRevolver",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
-                "WeaponBulletSpeed",
-                "1"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletRevolver",
+                    "WeaponBulletSpeed",
+                    "0",
+                    "1"
+                  ]
+                }
               ]
             }
           ]
@@ -112,7 +157,7 @@
                 "",
                 "BulletShotgunA",
                 "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "Player.PointY(\"GunSmoke\")",
                 ""
               ]
             },
@@ -122,9 +167,9 @@
               },
               "parameters": [
                 "",
-                "BulletShotgunA",
+                "BulletShotgunB",
                 "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "Player.PointY(\"GunSmoke\")",
                 ""
               ]
             },
@@ -134,22 +179,111 @@
               },
               "parameters": [
                 "",
-                "BulletShotgunA",
+                "BulletShotgunC",
                 "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "Player.PointY(\"GunSmoke\")",
                 ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletShotgunA",
+                    "WeaponBulletSpeed * -1",
+                    "0",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletShotgunB",
+                    "WeaponBulletSpeed * -1",
+                    "0",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletShotgunC",
+                    "WeaponBulletSpeed * -1",
+                    "0",
+                    "1"
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "AddForceTowardPosition"
-              },
-              "parameters": [
-                "BulletShotgunA",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
-                "WeaponBulletSpeed",
-                "1"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletShotgunA",
+                    "WeaponBulletSpeed",
+                    "0",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletShotgunB",
+                    "WeaponBulletSpeed",
+                    "0",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletShotgunC",
+                    "WeaponBulletSpeed",
+                    "0",
+                    "1"
+                  ]
+                }
               ]
             }
           ]
@@ -177,20 +311,151 @@
                 "",
                 "BulletRifle",
                 "Player.PointX(\"GunSmoke\")",
-                "Player.PointY(\"GunSmoke\")-6",
+                "Player.PointY(\"GunSmoke\")",
                 ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletRifle",
+                    "WeaponBulletSpeed * -1",
+                    "0",
+                    "1"
+                  ]
+                }
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletRifle",
+                    "WeaponBulletSpeed",
+                    "0",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
               "type": {
-                "value": "AddForceTowardPosition"
+                "value": "NumberVariable"
               },
               "parameters": [
-                "BulletRifle",
-                "Player.PointX(\"GunAim\")",
-                "Player.PointY(\"GunAim\")",
-                "WeaponBulletSpeed",
-                "1"
+                "CurrentWeaponId",
+                "=",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "BulletRay",
+                "Player.PointX(\"GunSmoke\")",
+                "Player.PointY(\"GunSmoke\")",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletRay",
+                    "WeaponBulletSpeed * -1",
+                    "0",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "BulletRay",
+                    "WeaponBulletSpeed",
+                    "0",
+                    "1"
+                  ]
+                }
               ]
             }
           ]
@@ -278,7 +543,7 @@
             "Player",
             "GunBulletCounter",
             ">=",
-            "6"
+            "WeaponMag"
           ]
         }
       ],
@@ -315,7 +580,7 @@
             "Player",
             "GunBulletCounter",
             "<",
-            "6"
+            "WeaponMag"
           ]
         },
         {
@@ -370,7 +635,7 @@
             "Player",
             "GunBulletCounter",
             "<",
-            "6"
+            "WeaponMag"
           ]
         },
         {
