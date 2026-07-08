@@ -1482,7 +1482,7 @@
                 "Player",
                 "GunBulletCounter",
                 "<",
-                "2"
+                "WeaponMag"
               ]
             },
             {
@@ -1623,7 +1623,7 @@
                 "Player",
                 "GunBulletCounter",
                 "<",
-                "2"
+                "WeaponMag"
               ]
             },
             {
