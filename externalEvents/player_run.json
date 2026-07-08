@@ -365,7 +365,7 @@
             "Player",
             "GunBulletCounter",
             ">=",
-            "6"
+            "WeaponMag"
           ]
         },
         {
