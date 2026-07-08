@@ -7,10 +7,44 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Player MAIN - WEAPON CORE (OPTIMIZED)",
+      "name": "Player MAIN - WEAPON CORE (FIXED & OPTIMIZED)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "DebugDstance",
+                "Text",
+                "=",
+                "\"Current MAG\" + WeaponMag"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "DebugState",
+                "Text",
+                "=",
+                "\"Current MAG\" + WeaponMag"
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -57,18 +91,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Scelta arma pi da fare con il menu delle armi "
-        },
-        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -90,6 +112,16 @@
                 "CurrentWeaponId",
                 "=",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "LastWeaponId",
+                "=",
+                "-1"
               ]
             },
             {
@@ -132,6 +164,16 @@
             },
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "LastWeaponId",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
@@ -166,6 +208,16 @@
                 "CurrentWeaponId",
                 "=",
                 "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "LastWeaponId",
+                "=",
+                "-1"
               ]
             },
             {
@@ -208,6 +260,16 @@
             },
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "LastWeaponId",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
@@ -230,7 +292,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "I parametri delle armi sono dentro le variabili di scena/globali"
+          "comment": "CARICAMENTO VARIABILI ARMA 0 (Pistola)"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -370,26 +432,24 @@
                 "value": "Hide"
               },
               "parameters": [
-                "GunShotgun"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "GunRifle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
+                "GunShotgun",
+                "GunRifle",
                 "GunRay"
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "CARICAMENTO VARIABILI ARMA 1 (Fucile)"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -537,18 +597,23 @@
                 "value": "Hide"
               },
               "parameters": [
-                "GunRifle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
+                "GunRifle",
                 "GunRay"
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "CARICAMENTO VARIABILI ARMA 2 (Rifle)"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -680,14 +745,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "GunRevolver"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
+                "GunRevolver",
                 "GunShotgun"
               ]
             },
@@ -708,6 +766,18 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "CARICAMENTO VARIABILI ARMA 3 (Ray)"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -839,22 +909,8 @@
                 "value": "Hide"
               },
               "parameters": [
-                "GunRevolver"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "GunShotgun"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
+                "GunRevolver",
+                "GunShotgun",
                 "GunRifle"
               ]
             },
@@ -1265,110 +1321,50 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "RELOAD LOGIC: Reset ammo when reload ends"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "v"
-              ]
-            },
-            {
-              "type": {
                 "value": "NumberVariable"
               },
               "parameters": [
-                "CanControl",
+                "State",
                 "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "State",
-                "!=",
-                "6"
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "State",
-                "!=",
-                "9"
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "State",
-                "!=",
                 "11"
               ]
             },
             {
               "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "NextShootAt",
-                "<=",
-                "TimeFromStart()"
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberObjectVariable"
+                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
               },
               "parameters": [
                 "Player",
-                "GunBulletCounter",
-                "<",
-                "WeaponMag"
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "TextForGunAmmunition",
-                ">",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "isShooting",
-                "False",
-                ""
+                "Animation"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetNumberObjectVariable"
               },
               "parameters": [
                 "Player",
-                "isShooting",
-                "True",
-                ""
+                "GunBulletCounter",
+                "=",
+                "0"
               ]
             },
             {
@@ -1376,9 +1372,20 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "NextShootAt",
+                "TextForGunAmmunition",
                 "=",
-                "TimeFromStart()+WeaponFireDelay"
+                "WeaponMag"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Ammunitions",
+                "Text",
+                "=",
+                "\"\" + TextForGunAmmunition"
               ]
             },
             {
@@ -1388,10 +1395,22 @@
               "parameters": [
                 "State",
                 "=",
-                "12"
+                "0"
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Stato 12 Run&Gun"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -1463,7 +1482,148 @@
                 "Player",
                 "GunBulletCounter",
                 "<",
-                "WeaponMag"
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "TextForGunAmmunition",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "isShooting",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "isShooting",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "NextShootAt",
+                "=",
+                "TimeFromStart()+WeaponFireDelay"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "State",
+                "=",
+                "12"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Stato 8 Shoot"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "v"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "CanControl",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "9"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "State",
+                "!=",
+                "11"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "NextShootAt",
+                "<=",
+                "TimeFromStart()"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "GunBulletCounter",
+                "<",
+                "2"
               ]
             },
             {
