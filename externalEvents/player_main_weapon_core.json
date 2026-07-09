@@ -531,6 +531,18 @@
             },
             {
               "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "GunRevolver",
+                "Player.PointX(\"GunHand\")",
+                "Player.PointX(\"GunHand\")",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Show"
               },
               "parameters": [
@@ -733,6 +745,18 @@
               "parameters": [
                 "GunRay"
               ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "GunShotgun",
+                "Player.PointX(\"GunHand\")",
+                "Player.PointX(\"GunHand\")",
+                ""
+              ]
             }
           ]
         },
@@ -904,6 +928,18 @@
               },
               "parameters": [
                 "GunRay"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "GunRifle",
+                "Player.PointX(\"GunHand\")",
+                "Player.PointX(\"GunHand\")",
+                ""
               ]
             }
           ]
@@ -1077,6 +1113,18 @@
               },
               "parameters": [
                 "GunShotgun"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "GunRay",
+                "Player.PointX(\"GunHand\")",
+                "Player.PointX(\"GunHand\")",
+                ""
               ]
             }
           ]

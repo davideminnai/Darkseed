@@ -58,227 +58,227 @@
   "variables": [
     {
       "name": "State",
-      "persistentUuid": "e00610a8-6cbf-42e8-a22e-f8c83d2cf7e4",
+      "persistentUuid": "830c6986-faf0-46af-8df4-07e54e029c0f",
       "type": "number",
       "value": 0
     },
     {
       "name": "ControlMode",
-      "persistentUuid": "b150e90f-154b-4da3-97e7-58488b4394b7",
+      "persistentUuid": "2c01ab7c-a06e-4a38-8865-f11b3e145a94",
       "type": "number",
       "value": 0
     },
     {
       "name": "DebugDist",
-      "persistentUuid": "c6ca54fa-111c-48e3-83ce-276eb5d3a238",
+      "persistentUuid": "f6709419-b0bc-4fca-b1c8-241d56835b92",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionLastX",
-      "persistentUuid": "8a2e03ac-b998-4532-9036-7f7b776951e8",
+      "persistentUuid": "8f76347b-3903-4bf8-a83c-3ec5f9fc937a",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetX",
-      "persistentUuid": "67e5ebf2-ad45-48db-a62f-ae36e2ff69e1",
+      "persistentUuid": "6b3eed23-aa36-459d-b483-aff20f05cb23",
       "type": "number",
       "value": 0
     },
     {
       "name": "PrevX",
-      "persistentUuid": "b2661115-c395-4740-9dff-515cfdfe8ea2",
+      "persistentUuid": "c871c57b-202e-4553-8b4b-d6e029f4c6d2",
       "type": "number",
       "value": 0
     },
     {
       "name": "CompanionX",
-      "persistentUuid": "c42a7922-ffb7-4502-b0ad-242713a47fbf",
+      "persistentUuid": "a0403352-d623-4e24-9005-bd24b777da34",
       "type": "number",
       "value": 0
     },
     {
       "name": "NearestEnemyDist",
-      "persistentUuid": "4bcb0a71-2297-4185-af0d-b54789058135",
+      "persistentUuid": "7e2ce527-f8d5-48c6-8f05-63ecefb6ec1c",
       "type": "number",
       "value": 999999
     },
     {
       "name": "TargetEnemyX",
-      "persistentUuid": "b0d24596-e2c9-467f-96a2-ac8afbe6c8e0",
+      "persistentUuid": "2f5e339e-29d4-4ff8-93ce-7b667cf8d36e",
       "type": "number",
       "value": 0
     },
     {
       "name": "TargetEnemyY",
-      "persistentUuid": "397cd1c5-1ae5-46ce-8339-469d31978ffc",
+      "persistentUuid": "676bc017-e6b2-41f2-bd52-ca4b949766ff",
       "type": "number",
       "value": 0
     },
     {
       "name": "HitAt",
-      "persistentUuid": "912e3bae-eb22-455f-bbca-f9f0424d28c0",
+      "persistentUuid": "a68836e1-3fc5-4653-8bfe-f6733b5b377e",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanControl",
-      "persistentUuid": "b0884cb3-02cd-4590-8537-acce382b858e",
+      "persistentUuid": "0ccd7ea6-8a87-4d13-b87f-5b3b6c818394",
       "type": "number",
       "value": 0
     },
     {
       "name": "BlinkAt",
-      "persistentUuid": "d9f0ca51-e968-480f-8889-bdc2af67a7f4",
+      "persistentUuid": "b678c01a-51df-4371-b4e4-50fdfc86d14f",
       "type": "number",
       "value": 0
     },
     {
       "name": "HurtAt",
-      "persistentUuid": "9a3a1114-735a-46c1-b443-28c7665dee86",
+      "persistentUuid": "ff80cb77-542f-4f4b-a6e6-884838a06fc5",
       "type": "number",
       "value": 0
     },
     {
       "name": "CanStateUpdate",
-      "persistentUuid": "9b2bb552-1597-4753-9216-1cc0b1ee7218",
+      "persistentUuid": "3d939f77-c8c3-47e6-b650-99329013a52d",
       "type": "number",
       "value": 0
     },
     {
       "name": "NextShootAt",
-      "persistentUuid": "82aa4afc-89f7-4b3f-a2a4-fecbdb977bf6",
+      "persistentUuid": "33c4ab51-3ec9-49a1-9822-ce02eff5fab3",
       "type": "number",
       "value": 0
     },
     {
       "name": "CurrentWeaponId",
-      "persistentUuid": "74170db5-15ba-4b0b-9ebb-926c24ed40fb",
+      "persistentUuid": "10c5de2d-0824-4d8d-a267-0a7ec869f142",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponDamage",
-      "persistentUuid": "db73d45e-11ed-49e5-aa4f-3db0e9be3b7a",
+      "persistentUuid": "495c78cc-8eae-4b14-bba8-1929bc8c08df",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponFireDelay",
-      "persistentUuid": "f51623a6-a32c-41ba-8466-7f09a4487710",
+      "persistentUuid": "bb41734a-cf54-475e-8937-fcf690abccc3",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponBulletSpeed",
-      "persistentUuid": "a93cf77b-72cd-4d22-a7e0-e4094b0402d1",
+      "persistentUuid": "b04b476e-93ef-406d-941d-e4f33e1bf2d9",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponAmmoCost",
-      "persistentUuid": "3e1ee0ff-d7f0-4e23-9cae-0b4bc9538498",
+      "persistentUuid": "432fee6a-7bee-4436-8385-837e29f0082d",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponShootAnim",
-      "persistentUuid": "0ed2b9d3-d069-480d-ae29-455655e270f0",
+      "persistentUuid": "86e019b9-a0e5-44c8-b092-2bda42ae37eb",
       "type": "string",
       "value": ""
     },
     {
       "name": "LastWeaponId",
-      "persistentUuid": "12f44b74-f7d3-4538-9718-8eec108605b8",
+      "persistentUuid": "70e2acbf-b2b0-4d1d-975d-759013aa35b8",
       "type": "number",
       "value": 0
     },
     {
       "name": "Weapons",
-      "persistentUuid": "2438aaf6-c178-467b-9493-5ddb944e97ad",
+      "persistentUuid": "54acac8e-8fa6-4acb-97f4-62799701dbaa",
       "type": "structure",
       "children": [
         {
           "name": "0",
-          "persistentUuid": "66e007fe-c71b-4c34-bf74-0d375ef566ab",
+          "persistentUuid": "dd5aa8cc-da2a-4097-9bbf-bc37dff60e16",
           "type": "structure",
           "children": [
             {
               "name": "AmmoCost",
-              "persistentUuid": "e6a13b88-ecd3-4060-a150-af327f1e85c1",
+              "persistentUuid": "339989c7-d5e7-473a-8d30-701672b0d576",
               "type": "number",
               "value": 1
             },
             {
               "name": "BulletObject",
-              "persistentUuid": "792c6e80-afb5-4318-90d9-0e2bf1067516",
+              "persistentUuid": "3ecd2df4-3366-49ca-b650-44e957736d7f",
               "type": "string",
               "value": "BulletRevolver"
             },
             {
               "name": "BulletSpeed",
-              "persistentUuid": "5a9e62aa-1687-4def-99d8-05fe0f7ebea4",
+              "persistentUuid": "16979192-79aa-45c7-b634-760228bbea4c",
               "type": "number",
               "value": 300
             },
             {
               "name": "Damage",
-              "persistentUuid": "166cc44a-909e-4f37-8882-6d10ea87fa9e",
+              "persistentUuid": "8f21e2f2-6819-4bf8-bfde-50708ee60dc7",
               "type": "number",
               "value": 1
             },
             {
               "name": "FireDelay",
-              "persistentUuid": "994d80bb-7aa4-4f99-b6db-c4cf8aa5cdad",
+              "persistentUuid": "1f07b827-3f03-4d16-b394-36d867e55eeb",
               "type": "number",
               "value": 0.14
             },
             {
               "name": "Mag",
-              "persistentUuid": "02a4a46c-c983-4542-bad3-8a65ed1cf4ac",
+              "persistentUuid": "3897d3dd-f731-4d98-ac7a-e3341b39c1b9",
               "type": "number",
               "value": 5
             },
             {
               "name": "Mode",
-              "persistentUuid": "63ac89c1-8b0a-41cb-8bf9-e99dfadbe390",
+              "persistentUuid": "9198716c-09b1-475c-bab5-2fd57d67d0df",
               "type": "number",
               "value": 0
             },
             {
               "name": "Name",
-              "persistentUuid": "d7618bf0-bed3-4749-8bd1-3951d2c761d2",
+              "persistentUuid": "6115660a-59fc-4e3f-b197-9e02d1db5af2",
               "type": "string",
               "value": "Pistol"
             },
             {
               "name": "Pellets",
-              "persistentUuid": "07456378-cd9d-4d77-86a6-053698928fae",
+              "persistentUuid": "4f602b30-7108-4bef-9911-540e4116e10a",
               "type": "number",
               "value": 1
             },
             {
               "name": "ReloadTime",
-              "persistentUuid": "d59bc014-7e64-467d-a4e2-b2c901d9db4a",
+              "persistentUuid": "9d09dd10-a49d-45e6-a6bd-38369aa9f5c3",
               "type": "number",
               "value": 1.2
             },
             {
               "name": "ShootAnim",
-              "persistentUuid": "846987e0-84e4-4437-8adf-880d8f97e881",
+              "persistentUuid": "ddeaf5e4-1eb2-43b2-add3-d173037aa0ee",
               "type": "string",
               "value": "Shoot_Pistol"
             },
             {
               "name": "ShootSfx",
-              "persistentUuid": "43740285-eaf5-4145-83c9-f46e280591ed",
+              "persistentUuid": "528a837f-06c9-4bf9-a0a9-9a3237019ee6",
               "type": "string",
               "value": "sfx_pistol"
             },
             {
               "name": "Spread",
-              "persistentUuid": "6ad6910e-db59-43dd-bd22-1ff3cc7376c1",
+              "persistentUuid": "fe093227-52a5-4089-9bde-31f824566de6",
               "type": "number",
               "value": 0
             }
@@ -286,84 +286,84 @@
         },
         {
           "name": "1",
-          "persistentUuid": "018a4973-8205-4bca-80e7-d911e2c8b625",
+          "persistentUuid": "6feabd4c-ee31-4c28-a55c-8bb3cbbad476",
           "type": "structure",
           "children": [
             {
               "name": "AmmoCost",
-              "persistentUuid": "4758ec3f-30ca-42c7-bb9d-1afc158aa073",
+              "persistentUuid": "771ea2b2-dc1d-48df-a3f7-5cb84560e9a7",
               "type": "number",
               "value": 1
             },
             {
               "name": "BulletObject",
-              "persistentUuid": "422567de-3116-4215-83b9-3edc74ac0a34",
+              "persistentUuid": "2e11a25a-203f-471a-873d-9293fc4c59e6",
               "type": "string",
               "value": "BulletShotgunA"
             },
             {
               "name": "BulletSpeed",
-              "persistentUuid": "3cf316c0-b383-459c-b321-d85d68ef81b7",
+              "persistentUuid": "12bf35e3-f74e-42be-bfb5-5387d642ed8c",
               "type": "number",
               "value": 240
             },
             {
               "name": "Damage",
-              "persistentUuid": "16848045-653d-47a8-9250-52dda5e36911",
+              "persistentUuid": "63cd9907-bd6c-4e63-a4f9-cb461c39cc68",
               "type": "number",
               "value": 2
             },
             {
               "name": "FireDelay",
-              "persistentUuid": "9603a216-ee81-4a52-918f-a1ba9c90db72",
+              "persistentUuid": "34cc6f63-a98b-4395-8388-5b2771e41057",
               "type": "number",
               "value": 0.45
             },
             {
               "name": "Mag",
-              "persistentUuid": "faebff28-9956-45b4-b777-ef14c6acdaa0",
+              "persistentUuid": "a8f2229a-0cd2-434d-98c2-29a1a7861e11",
               "type": "number",
               "value": 9
             },
             {
               "name": "Mode",
-              "persistentUuid": "750c287a-4c8a-46fc-bf9a-cfc714f26494",
+              "persistentUuid": "e64423eb-934e-4922-8737-10627ceaad20",
               "type": "number",
               "value": 1
             },
             {
               "name": "Name",
-              "persistentUuid": "498d141a-abd6-436b-9be6-8921a83cf110",
+              "persistentUuid": "ae640f69-1e69-4c49-b327-a2ebd5bf5541",
               "type": "string",
               "value": "Shotgun"
             },
             {
               "name": "Pellets",
-              "persistentUuid": "a584ddc2-d61b-45fb-9d10-34ce4167dc9c",
+              "persistentUuid": "c5310bd1-ee40-4d07-9a1f-bd7ed4088f88",
               "type": "number",
               "value": 1
             },
             {
               "name": "ReloadTime",
-              "persistentUuid": "a1c7b622-c167-4210-9b9d-c10fa30b771e",
+              "persistentUuid": "6459f728-4343-4216-9ff9-0bbb6fe11392",
               "type": "number",
               "value": 1.8
             },
             {
               "name": "ShootAnim",
-              "persistentUuid": "719df003-02fd-41b2-bb48-b5ab0b4e7e3a",
+              "persistentUuid": "82d1a029-5ba5-4602-8cea-61b722e0e9e1",
               "type": "string",
               "value": "Shoot_Shotgun"
             },
             {
               "name": "ShootSfx",
-              "persistentUuid": "8453359d-ec2e-457d-a10f-e3ea6166c920",
+              "persistentUuid": "714fa177-4781-46cb-a137-126d82a9e852",
               "type": "string",
               "value": "sfx_shotgun"
             },
             {
               "name": "Spread",
-              "persistentUuid": "2de2cd84-7672-4f3c-8239-5d34472104af",
+              "persistentUuid": "d349d7b1-8a00-4bc4-b71b-5a8896d36536",
               "type": "number",
               "value": 10
             }
@@ -371,84 +371,84 @@
         },
         {
           "name": "2",
-          "persistentUuid": "66f3ed43-cb6e-482b-9e27-d856f71e62df",
+          "persistentUuid": "534a82cf-52ec-488f-8c4c-4863d3933b40",
           "type": "structure",
           "children": [
             {
               "name": "AmmoCost",
-              "persistentUuid": "27f5d857-c045-44aa-8a72-2fb5ffd09672",
+              "persistentUuid": "c7c7c289-fbe1-41a8-ba76-eea8d5c46b65",
               "type": "number",
               "value": 1
             },
             {
               "name": "BulletObject",
-              "persistentUuid": "9ab5c533-a729-45f1-aa01-596fd6cf3277",
+              "persistentUuid": "0676f382-4aec-4c9c-8a14-5c9ebd3bbd0b",
               "type": "string",
               "value": "BulletRifle"
             },
             {
               "name": "BulletSpeed",
-              "persistentUuid": "b8bd506f-0b72-480e-9f1f-b8e0b6170aa3",
+              "persistentUuid": "bb142900-9581-44d6-8804-25cd4401411e",
               "type": "number",
               "value": 360
             },
             {
               "name": "Damage",
-              "persistentUuid": "1c889186-dd71-4778-9d9b-c6950379fc4f",
+              "persistentUuid": "52b30e7c-a47b-4757-adab-62b4e002087e",
               "type": "number",
               "value": 1
             },
             {
               "name": "FireDelay",
-              "persistentUuid": "80e17e6e-1253-4234-8c43-16d6f8fd5a99",
+              "persistentUuid": "432d047d-46eb-48bf-9a1d-5c972f3e99e1",
               "type": "number",
               "value": 0.08
             },
             {
               "name": "Mag",
-              "persistentUuid": "868fca0b-07f5-4121-b970-e759cd726fba",
+              "persistentUuid": "17d2e3f4-3ac2-4c58-ba84-613a69994223",
               "type": "number",
               "value": 10
             },
             {
               "name": "Mode",
-              "persistentUuid": "9d44d060-7a5c-45da-bd1f-8a221834b376",
+              "persistentUuid": "19d0df75-52b7-49dd-9698-db3c2b16efe5",
               "type": "number",
               "value": 0
             },
             {
               "name": "Name",
-              "persistentUuid": "a163eecf-c554-4c55-b48c-fb4bfebaf076",
+              "persistentUuid": "1725042b-30e0-4974-bb2e-8ef4d4ff5b37",
               "type": "string",
               "value": "Rifle"
             },
             {
               "name": "Pellets",
-              "persistentUuid": "474cf215-fbe7-4609-b2df-7185bee7a9d3",
+              "persistentUuid": "0b9b6938-70c8-40d0-8b6d-e22a0396655f",
               "type": "number",
               "value": 1
             },
             {
               "name": "ReloadTime",
-              "persistentUuid": "9c823892-d5ff-460c-b3d1-3ae7938629ce",
+              "persistentUuid": "49c9c283-d7e0-40af-825a-6a3ebf29722f",
               "type": "number",
               "value": 1.4
             },
             {
               "name": "ShootAnim",
-              "persistentUuid": "a7dee762-05c3-4934-b2cf-e43542f47d72",
+              "persistentUuid": "65ef74b0-e347-45d6-ac69-b10b2596be42",
               "type": "string",
               "value": "Shoot_Rifle"
             },
             {
               "name": "ShootSfx",
-              "persistentUuid": "906f8793-1eea-41a3-b52f-41fe02ba0caf",
+              "persistentUuid": "73906f4f-f79b-4930-aa12-a85972d63c4a",
               "type": "string",
               "value": "sfx_rifle"
             },
             {
               "name": "Spread",
-              "persistentUuid": "b1a22917-a093-4634-8355-7b2e99a5f771",
+              "persistentUuid": "a913694a-0e40-4824-8758-e33bf864af7c",
               "type": "number",
               "value": 2
             }
@@ -456,84 +456,84 @@
         },
         {
           "name": "3",
-          "persistentUuid": "3b26d247-0e49-4ceb-be48-994999978617",
+          "persistentUuid": "96bc483b-ebb7-4de4-a1f4-c29a031a86f5",
           "type": "structure",
           "children": [
             {
               "name": "AmmoCost",
-              "persistentUuid": "958b98e7-e7d6-4e91-9a07-334c77ec0c00",
+              "persistentUuid": "338db7d7-39c7-4651-be63-66bff004d689",
               "type": "number",
               "value": 2
             },
             {
               "name": "BulletObject",
-              "persistentUuid": "9237c545-1d83-4225-afdb-14dd0e80276a",
+              "persistentUuid": "d67bf756-142e-466e-9611-1b3fb84ea645",
               "type": "string",
               "value": "BulletRay"
             },
             {
               "name": "BulletSpeed",
-              "persistentUuid": "0ad89fae-e479-4d14-9d61-bdb32e0d97b3",
+              "persistentUuid": "f8b49cc1-4a3f-4178-8c4f-e4c48eff703b",
               "type": "number",
               "value": 540
             },
             {
               "name": "Damage",
-              "persistentUuid": "546a177e-df1f-4646-9cf2-b9169f5524cc",
+              "persistentUuid": "be4c7f4d-3f72-49e8-a95a-ba79c0843ec1",
               "type": "number",
               "value": 2
             },
             {
               "name": "FireDelay",
-              "persistentUuid": "ea2155e8-2741-48b9-8797-f9e4d0b711f0",
+              "persistentUuid": "b7af046b-9e12-4a19-b224-511380334386",
               "type": "number",
               "value": 0.1
             },
             {
               "name": "Mag",
-              "persistentUuid": "3ad143db-78a9-4d8f-8a90-8227a4a052c5",
+              "persistentUuid": "a83f0562-d016-40c8-8199-b62281be466e",
               "type": "number",
               "value": 6
             },
             {
               "name": "Mode",
-              "persistentUuid": "f9acc75f-a0d6-4e87-9bee-67df2c9e839c",
+              "persistentUuid": "b03ab901-4a50-4526-90e5-2e9fcb6f1349",
               "type": "number",
               "value": 2
             },
             {
               "name": "Name",
-              "persistentUuid": "14cb2322-e073-4401-ba93-2e84aa1c788c",
+              "persistentUuid": "90d591f5-ae38-4345-a983-8a823b9f1e1f",
               "type": "string",
               "value": "Ray"
             },
             {
               "name": "Pellets",
-              "persistentUuid": "86b269ce-ae3c-4d5a-99aa-b8296b4919a1",
+              "persistentUuid": "34b4ed5f-e31b-4515-bcce-01bda62f6977",
               "type": "number",
               "value": 1
             },
             {
               "name": "ReloadTime",
-              "persistentUuid": "94d875a0-b0fd-4664-b5bf-fe0b18ba925a",
+              "persistentUuid": "77ca7152-c51c-4a1d-82a4-7d4582f29f63",
               "type": "number",
               "value": 1.6
             },
             {
               "name": "ShootAnim",
-              "persistentUuid": "b9802200-9cee-4ff7-adfb-cc339298889d",
+              "persistentUuid": "f182c335-8580-4b6c-b504-96a77551bcaa",
               "type": "string",
               "value": "Shoot_Ray"
             },
             {
               "name": "ShootSfx",
-              "persistentUuid": "4610af30-0d76-4497-ad8c-dc38cbcda8c3",
+              "persistentUuid": "bcf7ba79-760d-4ded-9c8a-e0a398a4778b",
               "type": "string",
               "value": "sfx_ray"
             },
             {
               "name": "Spread",
-              "persistentUuid": "5069e0f6-a44b-4c76-8549-418c6b11d972",
+              "persistentUuid": "8c5d1f41-6d34-4e55-abf7-23f78fc3e3b1",
               "type": "number",
               "value": 0
             }
@@ -543,42 +543,42 @@
     },
     {
       "name": "IsReloading",
-      "persistentUuid": "c63186fe-ba2c-45b1-87ec-6d13cbbb671c",
+      "persistentUuid": "f32f8fe0-8494-44ac-9d00-d1c1e6dc34ce",
       "type": "boolean",
       "value": false
     },
     {
       "name": "CurrentMagAmmo",
-      "persistentUuid": "699de51b-9fcd-43ac-bade-5539f74a6e93",
+      "persistentUuid": "3ea2d525-04fa-4be9-b107-543dd8d69d83",
       "type": "number",
       "value": 0
     },
     {
       "name": "ReserveAmmo",
-      "persistentUuid": "a8e825b6-cc89-4a5c-85f0-05f2917000f0",
+      "persistentUuid": "4e68ceb1-fe58-4380-b515-bd554a337228",
       "type": "structure",
       "children": [
         {
           "name": "0",
-          "persistentUuid": "fefe4755-9e9a-43d0-bdaf-a68015b18ee1",
+          "persistentUuid": "8bbf1b82-df47-46b0-967d-74eec86a8c25",
           "type": "number",
           "value": 60
         },
         {
           "name": "1",
-          "persistentUuid": "59c110d9-31af-4eee-b514-c16bb6379367",
+          "persistentUuid": "a1579fba-fbc2-4bb9-92f2-67557c42fd82",
           "type": "number",
           "value": 36
         },
         {
           "name": "2",
-          "persistentUuid": "679af5a6-cac8-4775-b03d-060a8c8a42c0",
+          "persistentUuid": "261eea91-f613-48c3-985d-5f158d139a94",
           "type": "number",
           "value": 120
         },
         {
           "name": "3",
-          "persistentUuid": "b1ea2a96-1b43-4403-a468-5cf9ad9e6dd2",
+          "persistentUuid": "fa83b31e-19ce-42fd-ba29-e9548687e734",
           "type": "number",
           "value": 24
         }
@@ -586,25 +586,25 @@
     },
     {
       "name": "WeaponShootSfx",
-      "persistentUuid": "a35a2f99-8a1f-4e19-a8e5-db1417792ec0",
+      "persistentUuid": "8ac054a6-5170-42b6-9ac4-1683fc0d3586",
       "type": "string",
       "value": "0"
     },
     {
       "name": "WeaponBulletObject",
-      "persistentUuid": "cfc0a93b-d977-42bb-bed3-4b8655a1932a",
+      "persistentUuid": "57d4b73c-d267-44fd-8c97-abc99eba60e5",
       "type": "string",
       "value": ""
     },
     {
       "name": "WeaponMode",
-      "persistentUuid": "00aafa5d-067b-45a0-97ff-de14e4031c66",
+      "persistentUuid": "eb64c4b2-4651-4cce-9852-de9ecdcf036d",
       "type": "number",
       "value": 0
     },
     {
       "name": "WeaponMag",
-      "persistentUuid": "82396037-2a5e-480a-b374-3a5d21151dc0",
+      "persistentUuid": "4de2dfaf-3c97-482b-b0e0-e7bc45353a76",
       "type": "number",
       "value": 0
     }
@@ -4251,6 +4251,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Player MAIN - Complete FSM + Unified Damage ",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5846,6 +5847,14 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Player_Main"
     },
     {
       "type": "BuiltinCommonInstructions::Link",
