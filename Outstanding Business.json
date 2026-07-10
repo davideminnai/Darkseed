@@ -29249,7 +29249,7 @@
           "MarginRight": 0
         }
       ],
-      "string": "50",
+      "string": "10",
       "font": "",
       "textAlignment": "left",
       "characterSize": 48,
@@ -29272,7 +29272,7 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "50",
+        "text": "10",
         "font": "",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
@@ -69530,9 +69530,9 @@
       "value": 0
     },
     {
-      "name": "TextForGunAmmunition",
+      "name": "Total_bullets",
       "type": "number",
-      "value": 50
+      "value": 20
     },
     {
       "name": "CanTakeDamage",

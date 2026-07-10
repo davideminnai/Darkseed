@@ -437,7 +437,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "TextForGunAmmunition",
+                "Total_bullets",
                 "-",
                 "WeaponAmmoCost"
               ]
@@ -450,7 +450,7 @@
                 "Ammunitions",
                 "Text",
                 "=",
-                "\"\" + TextForGunAmmunition"
+                "\"\" + Total_bullets"
               ]
             },
             {
