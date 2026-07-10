@@ -69530,7 +69530,7 @@
       "value": 0
     },
     {
-      "name": "Total_bullets",
+      "name": "TotalBullets",
       "type": "number",
       "value": 20
     },

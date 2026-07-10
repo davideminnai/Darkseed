@@ -481,7 +481,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "Total_bullets",
+                "TotalBullets",
                 "-",
                 "WeaponAmmoCost"
               ]
@@ -494,7 +494,7 @@
                 "Ammunitions",
                 "Text",
                 "=",
-                "\"\" + Total_bullets"
+                "\"\" + TotalBullets"
               ]
             },
             {

@@ -636,6 +636,11 @@
       "name": "WeaponEquipped",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "TotalBullets",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [

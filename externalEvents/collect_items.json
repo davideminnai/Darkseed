@@ -171,7 +171,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "Total_bullets",
+                "TotalBullets",
                 "+",
                 "5"
               ]
@@ -205,7 +205,7 @@
                 "Ammunitions",
                 "Text",
                 "=",
-                "\"\" + Total_bullets"
+                "\"\" + TotalBullets"
               ]
             },
             {
