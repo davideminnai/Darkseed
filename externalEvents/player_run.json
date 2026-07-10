@@ -247,12 +247,6 @@
         },
         {
           "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        },
-        {
-          "type": {
             "value": "NumberVariable"
           },
           "parameters": [
@@ -365,7 +359,7 @@
             "Player",
             "GunBulletCounter",
             ">=",
-            "6"
+            "WeaponMag"
           ]
         },
         {
@@ -378,12 +372,6 @@
             "False",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         },
         {
           "type": {

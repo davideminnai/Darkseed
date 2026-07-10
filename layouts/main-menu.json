@@ -44,70 +44,84 @@
   "variables": [
     {
       "name": "RandomLightningCooldown",
+      "persistentUuid": "02a277d1-b3d5-48a0-953f-aeeb8179a211",
       "type": "number",
       "value": 0
     },
     {
       "name": "FloorYPosition",
+      "persistentUuid": "1ef9034a-ab8d-4d67-a8bc-c7f55c0afcea",
       "type": "number",
       "value": 0
     },
     {
       "name": "GameControls",
+      "persistentUuid": "b0a3cac0-787a-4403-a7cd-d774e33f7166",
       "type": "structure",
       "children": [
         {
           "name": "BasicAttack",
+          "persistentUuid": "813aabf7-e2b9-495f-ad6d-695d57e07e0d",
           "type": "number",
           "value": 0
         },
         {
           "name": "Dash",
+          "persistentUuid": "b8223336-f77e-444d-9dcb-c0667dc6e1b8",
           "type": "number",
           "value": 0
         },
         {
           "name": "Float",
+          "persistentUuid": "747698ce-580b-47a2-a862-296f70abf17b",
           "type": "number",
           "value": 0
         },
         {
           "name": "Jump",
+          "persistentUuid": "a68d158b-4f45-461f-9ce5-ab100c833b90",
           "type": "number",
           "value": 0
         },
         {
           "name": "Map",
+          "persistentUuid": "a6e2bb6f-07b4-4733-9034-5576e41f1e12",
           "type": "number",
           "value": 0
         },
         {
           "name": "MoveDown",
+          "persistentUuid": "ff835795-66ef-4058-a06a-37582177eb50",
           "type": "number",
           "value": 0
         },
         {
           "name": "MoveLeft",
+          "persistentUuid": "84fb319a-6b91-4c71-a944-4f0692b70bc9",
           "type": "number",
           "value": 0
         },
         {
           "name": "MoveRight",
+          "persistentUuid": "98739c2f-f433-4259-b80b-1beed59e4eff",
           "type": "number",
           "value": 0
         },
         {
           "name": "MoveUp",
+          "persistentUuid": "3df96107-b15b-431d-8560-f10c9add02ed",
           "type": "number",
           "value": 0
         },
         {
           "name": "Pause",
+          "persistentUuid": "9350cfde-4338-4c1c-827d-c657f68db866",
           "type": "number",
           "value": 0
         },
         {
           "name": "RangeAttack",
+          "persistentUuid": "48d69a2f-6394-46bb-a2a9-1a55b854ce28",
           "type": "number",
           "value": 0
         }
@@ -115,16 +129,19 @@
     },
     {
       "name": "UpdateControlsButtonsText",
+      "persistentUuid": "921a85b3-b9cf-49d2-bd28-3b80c037e861",
       "type": "boolean",
       "value": false
     },
     {
       "name": "PressedControlButtonNumber",
+      "persistentUuid": "43ab046d-9c45-4ce2-a35a-34891ee93fcf",
       "type": "number",
       "value": 0
     },
     {
       "name": "ControlsButtonsOrder",
+      "persistentUuid": "91a02328-780a-4b72-a4da-072fc42e94ec",
       "type": "number",
       "value": 1
     }
