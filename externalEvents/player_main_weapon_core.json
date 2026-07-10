@@ -97,6 +97,16 @@
                 "=",
                 "0"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponEquipped",
+                "=",
+                "0"
+              ]
             }
           ]
         },
@@ -142,6 +152,16 @@
                 "LastWeaponId",
                 "=",
                 "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponEquipped",
+                "=",
+                "1"
               ]
             }
           ]
@@ -189,6 +209,16 @@
                 "=",
                 "-1"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponEquipped",
+                "=",
+                "1"
+              ]
             }
           ]
         },
@@ -235,6 +265,16 @@
                 "=",
                 "-1"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponEquipped",
+                "=",
+                "1"
+              ]
             }
           ]
         },
@@ -280,6 +320,16 @@
                 "LastWeaponId",
                 "=",
                 "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "WeaponEquipped",
+                "=",
+                "1"
               ]
             }
           ]
@@ -1720,6 +1770,16 @@
                 "False",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "WeaponEquipped",
+                "=",
+                "1"
+              ]
             }
           ],
           "actions": [
@@ -1889,6 +1949,16 @@
               "parameters": [
                 "Player",
                 "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "WeaponEquipped",
+                "=",
+                "1"
               ]
             }
           ],
